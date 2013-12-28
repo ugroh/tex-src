@@ -1,5 +1,5 @@
-tex-src (https://github.com/nyamcoder/tex-src)
-==============================================
+tex-src
+=======
 
 * contains several subfolders with LaTeX-examples mentioned in my (yet not published) book dealing with LaTeX, Linux, and Korean or Korean localisation, respectively, under the motto "Learn LaTeX through Korean studies." The OS has been Arch Linux, TeX system TeXLive (2008 or later). However, some examples use external programs, TeX packages, fonts, or other data. Hence
 		--> the source files may also contain CJK text
