@@ -1,0 +1,65 @@
+%%%%% Map of Korea
+%%%  korea.tex :: mito / nyamcoder
+
+\documentclass{article}
+\usepackage{pst-map2d,textcomp}
+\psset{path=./mappemonde/korea}
+\pagestyle{empty}
+
+\begin{document}
+\psset{linewidth=1.25\pslinewidth}
+
+\begin{pspicture*}(-2,-100)(8,-81)
+\psset{xunit=35,yunit=35}
+\psset{type=8,level=5,latitude0=100,longitude0=125}
+\WorldMap[maillage=false,capital=false,linewidth=0.75\pslinewidth,limiteL=190,borders=true,rivers=true]
+
+\psset{unit=1cm} % ``cm'' important, factor-only otherwise!
+\psline[linecolor=teal,linewidth=2mm](0,-84)(6.5,-98)
+	\rput(3.7,-86.5){\sffamily\bfseries\huge\color{teal}{Naturraum}}
+	\rput(3.5,-95){\sffamily\bfseries\huge\color{teal}{Kulturraum}}
+
+\psline[linecolor=magenta,linewidth=2mm](-1,-91.5)(7,-90)
+	\rput{11}(-1.4,-91.55){\large\bfseries\color{magenta}38\textdegree}
+
+\rput(0,-89){\sffamily\bfseries\huge\color{magenta}{Industrie}}
+\rput(1,-93){\sffamily\bfseries\huge\color{magenta}{Landwirtschaft}}
+
+\psline[linewidth=.5mm]{->}(4.5,-84.5)(5.5,-84.5)
+	\rput(5,-85){\large{Nord-Italien}}
+\psline[linewidth=.5mm]{->}(4.5,-98.5)(5.5,-98.5)
+	\rput(5,-98){\large Nord-Afrika}
+
+\rput(4.2,-88.5){\Huge\color{gray!90}{Nordkorea}}
+\rput(6.2,-92.5){\Huge\color{gray!90}{S\"udkorea}}
+
+\rput(.7,-98){
+	\psframebox[framearc=.05,linewidth=.5pt,framesep=6pt]{
+	\parbox{4.7cm}{
+		\raggedright\normalsize\underline{Klima:}\\
+		$\bullet$\enskip kontinental\enskip --\enskip k\"uhlgem\"a\ss igt\\\quad (Winter)\\
+		$\bullet$\enskip maritim\enskip --\enskip subtropisch\\\quad (Sommer)}
+	}}
+
+\rput(1.7,-82.3){
+	\psframebox[fillstyle=solid,fillcolor=white,framearc=.05,linewidth=.5pt,framesep=6pt]{\parbox{6.2cm}
+	{\centering\large{Landschaftstypen als wirtschaftsbestimmende Faktoren auf der koreanischen Halbinsel}}
+	}}
+
+\psframe[linewidth=1pt](-2,-100)(8,-81)
+
+% helping grid:
+%\psgrid[gridcolor=red](0,-90)(-2,-100)(8,-81)
+\end{pspicture*}
+\end{document}
+
+
+* compilation
+
+$ latex korea && dvips korea && gs -q -dBATCH -sDEVICE=pdfwrite "-sOutputFile=korea.pdf" -c .setpdfwrite -f "korea.ps"
+<return>
+>>showpage, press <return> to continue<<
+>>showpage, press <return> to continue<<
+
+or 3x <return> at once
+

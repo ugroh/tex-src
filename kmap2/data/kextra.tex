@@ -1,0 +1,67 @@
+%%%%%% korea2, layer2b -- mountain ranges, capitals
+%%%   kextra.tex :: mito / nyamcoder
+
+%\psset{unit=1cm}  % for standalone
+
+%%% 산맥   
+%\DeclareTextFontCommand{\textSANMAEK}{\color{Sienna}\itshape\selectfont}  ----> main doc preamble only!
+
+% Changbai Mountains    \large [linecolor=Brown]  
+\pstextpath{\pscurve[linestyle=none](2.1,-73.7)(2.7,-73.2)(3.45,-72.85)(4.5,-72.55)(5,-72.5)}{\color{SlateGray}\it\shortstack{\qquad 장백산맥\\\small{(창바이 산맥)\,/}}}  
+\pstextpath{\pscurve[linestyle=none](3,-73.3)(3.8,-73.65)(4.5,-73.7)}{\color{SlateGray}\it 백두산맥}  
+
+% Gaema Plateau
+\rput(4.2,-75.8){\textSANMAEK{\small 개마고원}}
+
+% Gangnam Mountains 
+\rput{30}(.75,-76.2){\textSANMAEK{\small 강\,남\,산\,맥}}
+
+% Hamgyeong Mountains 
+\rput{55}(5.1,-75.75){\textSANMAEK{\small 함경산맥}}
+
+% Jeogyuryeong Mountains 
+\rput{25}(2.2,-76.1){\textSANMAEK{\small 저\,규\,령\,산\,맥}}
+
+% Jiri Mountains 
+\rput{70}(4.1,-86){\textSANMAEK{지}}
+\rput{55}(4.3,-85.6){\textSANMAEK{리}}
+\rput{42}(4.57,-85.23){\textSANMAEK{산}}
+\rput{25}(4.95,-84.95){\textSANMAEK{맥}}
+
+% Macheollyeong Mountains 
+\rput{-70}(5.5,-74.5){\textSANMAEK{\small 마철령산맥}}
+
+% Myohyang Mountains 
+\rput{45}(2.85,-77){\textSANMAEK{\small 묘\,향\,산\,맥}}
+
+% Nangnim Mountains (aka 랑림산맥)
+\rput{-80}(3.3,-75.6){\textSANMAEK{\small 낭\,림\,산\,맥}} % 참고 랑림산맥 
+
+% Sobaek Mountains 
+\rput{60}(4.6,-84.1){\textSANMAEK{소}}
+\rput{45}(4.9,-83.7){\textSANMAEK{백}}
+\rput{30}(5.3,-83.3){\textSANMAEK{산}}
+\rput{22}(5.75,-83.05){\textSANMAEK{맥}}
+
+% Taebaek Mountains
+\rput{-45}(4.5,-79.7){\textSANMAEK{\large 태}}
+\rput{-65}(6.2,-82){\textSANMAEK{\large 백}}
+\rput{-90}(6.5,-83.7){\textSANMAEK{\large 산}}
+\rput{-110}(6.3,-85.5){\textSANMAEK{\large 맥}}
+
+
+%%% capitals/특별한 중심 도시의 방식
+\psset{unit=39}	% 또는 unit=39cm; zoom 39x 
+\pnodeMap(125.73,39.03){Pyeongyang}
+  \uput[0](Pyeongyang){\colorbox{OrangeRed}{\sf\textbf{평양}}}
+
+%  \psdot[linecolor=red,dotscale=1.5](Pyeongyang)  
+  \psdot[dotstyle=Bo,dotscale=1.5,fillcolor=red](Pyeongyang)  
+  \psdot[dotscale=.3](Pyeongyang)  
+\pnodeMap(126.983333,37.55){Seoul}
+  \uput[80](Seoul){\colorbox{OrangeRed}{\sf\textbf{서울}}}
+  
+%  \psdot[linecolor=red,dotscale=1.5](Seoul)  
+  \psdot[dotstyle=Bo,dotscale=1.5,fillcolor=red](Seoul)  
+  \psdot[dotscale=.3](Seoul)  
+

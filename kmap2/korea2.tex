@@ -1,0 +1,67 @@
+%%%%% Detailed map of Korea, main document
+%%%  korea2.tex :: mito / nyamcoder
+%%%  *** main config & input-files coordination ***
+\documentclass{article}
+\pagestyle{empty}
+\usepackage[svgnames]{xcolor}
+\usepackage{pst-map2dII,pst-text}
+\usepackage{kotex}
+\DeclareTextFontCommand{\textSEOM}{\ttfamily\SetAdhocFonts{utbm}{utgt}}	% 봄, kotexguide.pdf-39f
+\DeclareTextFontCommand{\textGANG}{\color{blue}\scriptsize\SetAdhocFonts{utbt}{utbt}} % 명조 
+\DeclareTextFontCommand{\textSANMAEK}{\color{Sienna}\itshape\selectfont}
+\usepackage{protosem}	% \Asade의 기호 --> \byeo,\cha
+\usepackage{textcomp}	% \textleaf의 기호 --> \dambae
+\usepackage{dingbat}	% \anchor의 기호 조선 (또는 \newpsfontdot{Anchor}[2 0 0 2 -.78 -.7]{dingbat}{<4D>})
+\usepackage{marvosym}	% \Industry의 기호; \Circpipe 기호 --> \kong
+\usepackage{graphicx}	% \raisebox과 \scalebox의 명령 등
+
+\begin{document}
+%\scalebox{.8}{ %  한 페이지로 만듬 --> vs. scale! (또는 페이지 디자인의 변함)
+\begin{pspicture*}(-3,-93)(11.5,-69.7)	% postscript의 그림-- 지도에서 한국 지방 부분의 좌표들
+
+%%%%%% layer1 -- tracks, terrain / 가장 밑게 되는 층
+
+\input{./data/kagro}
+\input{./data/ktracks}
+
+
+%%%%%% layer2 -- map essentials / 지도의 층
+
+%%% 기본적인 지도의 그리기
+\psset{path=./dataII}
+\psset{unit=39,type=8,latitude0=133,longitude0=125}
+\WorldMapII[asia,samer=false,namer=false,europe=false,africa=false,maillage,increment=5,linecolor=DarkBlue,linewidth=0.75\pslinewidth,borders,rivers]
+
+%%%  잘못 만든 (남한·낙동) 강선의 삭제
+\psset{unit=1cm}
+\psccurve*[linecolor=white](6.2,-82.5)(6,-82.1)(6.3,-82.3)
+
+
+%%%%%% layer3 -- div. data / 자료 
+
+\input{./data/kextra}
+\input{./data/kplaces}
+\input{./data/kdata}
+
+
+%%%%%% layer 4 -- explanation / 설명 
+
+\input{./data/kexpln}
+
+
+%%%%%% helping grid / 보조 눈금 
+%\psgrid[linewidth=.7pt,subgriddiv=2,gridcolor=red,gridlabelcolor=red](4,-80)(-3,-93)(11.5,-69)
+
+
+\end{pspicture*}%} % --> \scalebox
+\end{document} 
+
+
+* compilation
+
+$ latex korea2 && dvips korea2 && gs -q -dBATCH -sDEVICE=pdfwrite "-sOutputFile=korea2.pdf" -c .setpdfwrite -f "korea2.ps"
+<return>
+>>showpage, press <return> to continue<<
+>>showpage, press <return> to continue<<
+
+or 3x <return> at once

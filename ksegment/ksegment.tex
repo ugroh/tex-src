@@ -1,0 +1,96 @@
+\documentclass{article} %%% ksegment.tex :: mito / nyamcoder %%%
+\usepackage{CJKutf8} %  또는 hangul/kotex과 사용
+\usepackage{pstricks,pst-xkey,pst-asr}
+\pagestyle{empty}
+
+\begin{document}
+\begin{CJK}{UTF8}{mj}
+\noindent
+\begin{centering}
+\begin{em} 우리말 단어의 간단한 분할 표기:\end{em}\\[1em]
+
+%%%%%%%%%%%% (ㄱ) %%%%%%%%%%%%
+\newtier{sd} %  별도 sound: C/V
+\DefList{\sdoff{0}} %     "
+\tiershortcuts %     "
+
+\asr[reptype=nots,sd=(ph) -.5em (sound)]
+|\qsyl({환})4|{ㅎ}{ㅗ}{ㅏ\ }{ㄴ}|\qsyl({영})3|{이}{ㅓ}{ㅇ}|\qsyl({합})3|{ㅎ}{ ㅏ }{ㅂ}|\qsyl({니})2|{ㄴ}{ㅣ\ \,}|\qsyl({다})2|{ㄷ}{ㅏ\ \ }
+|\@[\sdoff](0,sd){C}\-(0,ts)
+\@[\sdoff](1,sd){V}\-(1,ts)
+\@[\sdoff](2,sd){V}\-(2,ts)
+\@[\sdoff](3,sd){C}\-(3,ts)
+\@[\sdoff](4,sd){V}\-(4,ts)
+\@[\sdoff](5,sd){V}\-(5,ts)
+\@[\sdoff](6,sd){C}\-(6,ts)
+\@[\sdoff](7,sd){C}\-(7,ts)
+\@[\sdoff](8,sd){V}\-(8,ts)
+\@[\sdoff](9,sd){C}\-(9,ts)
+\@[\sdoff](10,sd){C}\-(10,ts)
+\@[\sdoff](11,sd){V}\-(11,ts)
+\@[\sdoff](12,sd){C}\-(12,ts)
+\@[\sdoff](13,sd){V}\-(13,ts)
+\endasr\\[1em]
+
+\small
+V $=$ 모음$(vowel)$\qquad C $=$ 자음$(consonant)$\\[2em]
+
+\normalsize
+%%%%%%%%%%%% (ㄴ) %%%%%%%%%%%%
+\asr[tssym=\small{$\bullet$}]\3{ㅎ}{ㅘ}{ㄴ}\2{여}{ㅇ}\3{ㅎ}{ ㅏ }{ㅂ}\2{ㄴ}{ㅣ\ \,}\3{ㄷ}{ㅏ\ \,}:
+\endasr\\[1em] % no break at last line!!
+\small
+$\sigma=$ 음절$(syllable)$\\[2em]
+
+\normalsize
+%%%%%%%%%%%% (ㄷ) %%%%%%%%%%%%
+\newtier{nuc}
+\newtier{diph}
+\DefList{\syloffA{.4},\syloffB{-.1},\nucoff{.2},\diphoffA{-.2},\diphoffB{.2}}
+\tiershortcuts
+\asr[style=bigsyls,nuc=(sy) 1em ($\nu$),diph=(ph) -2em (monoph)]
+|\varsyl{\syloffA}{0,1,2}|{\ /\,ㅎ}{ㅘ}{ㄴ}
+|\varsyl{\syloffB}{0,1}|{여}{ㅇ}
+|\varsyl{\syloffA}{0,1,2}|{ㅎ}{ ㅏ }{\raisebox{-1em}{\shortstack{ㅂ\\{[ㅁ]}}}} % securing {[ㅁ]}; extra `` '' for `` ㅏ ''
+|\varsyl{\syloffA}{0,1}|{ㄴ}{ㅣ\ \,}
+|\varsyl{\syloffA}{0,1}|{ㄷ}{\,ㅏ\,/}
+|\@[\nucoff](1,nuc){$\nu$}\-(1,ts)
+\@[\diphoffA](.8,diph){ㅗ}\-(1,ph)
+\@[\diphoffB](1.2,diph){ㅏ}\-(1,ph)
+\@[\nucoff](3,nuc){$\nu$}\-(3,ts)
+\@[\diphoffB](2.7,diph){ㅣ\ \ \,}\-(3,ph)
+\@[\diphoffB](3.2,diph){ㅓ}\-(3,ph)
+\@[\nucoff](6,nuc){$\nu$}\-(6,ts)
+\@[\nucoff](9,nuc){$\nu$}\-(9,ts)
+\@[\nucoff](11,nuc){$\nu$}\-(11,ts)
+\endasr\\[.7em]
+
+\small
+$\sigma=$ 음절$(syllable)\qquad\nu=$ 핵$(nucleus)$
+\end{centering}
+\end{CJK}
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%
+
+* compilation
+
+$ latex ksegment && dvips ksegment && ps2pdf ksegment.ps
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+* documentation
+
+/usr/share/texlive/2008/texmf-dist/doc/generic/pst-asr/pst-asr-doc.pdf	% nach (24),(25) auf p12f u 22ff 35f; p42! 
+/usr/share/texlive/2008/texmf-dist/doc/generic/pst-asr/pst-asr-examples.pdf 
+/usr/share/texlive/2008/texmf-dist/tex/generic/pst-asr/pst-asr.tex
+
+
+
+/usr/share/texlive/2008/texmf-dist/doc/generic/pst-jtree/pst-jtree-doc.pdf
+/usr/share/texlive/2008/texmf-dist/doc/generic/pst-jtree/pst-jtree-examples.pdf
+/usr/share/texlive/2008/texmf-dist/doc/generic/pst-jtree/pst-jtree-examples.tex
+

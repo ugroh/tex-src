@@ -1,0 +1,94 @@
+%%%%%% korea2,  layer1b -- railroad system
+%%%   ktracks.tex :: mito / nyamcoder
+
+%\psset{unit=1} % for standalone
+
+%%% '철도 호선' / virtual railroad lines
+% (1) 부산--하어빈    Busan--Harbin
+\pscustom[linecolor=white,linewidth=.5pt,linestyle=dashed,dash=4pt 4pt,linearc=.2]{%
+\psline
+(6.45,-86.5)(6.4,-86)(6.2,-85.9)(5.9,-85.8)(6,-85.3)(5.7,-85.03)% 부산--대구
+(5.2,-84.6)(5,-84.65)(4.8,-84.6)(4.7,-84.4)(4.3,-84.5)(4,-84.42)(3.9,-84.45)(3.8,-84.35)(3.75,-84.2)% 대전 
+(3.5,-83.6)(3.25,-83.5)(3.12,-82.45)% 수원
+(3.1,-82)(3.05,-81.9)% 서울
+(3.2,-81.5)(3.35,-80.5)(3.4,-80)(3.75,-78.9)(3.7,-78.75)% 원산
+(3.53,-78.5)% 문천
+(3.55,-78.3)(3.57,-78.2)(3.7,-77.6)(3.85,-77.35)% 흥남
+(4.25,-77.2)(4.5,-76.9)(4.85,-76.85)% 신포 
+(5.35,-76.3)(5.8,-76.05)% 단천 
+(6.2,-75.63)% 김책
+(6.7,-74.3)(6.6,-73.8)(6.95,-73.35)% 청진
+(7.2,-72.5)(6.95,-71.1)(6.9,-71)% 연길 
+(6.43,-70.96)(6.3,-70.72)(6.2,-70.5)(6.1,-69.6)% --> 하어빈,블라디보스토크 
+\stroke[linewidth=3\pslinewidth,linecolor=black,linestyle=solid]}
+
+
+% (2) 목포--대전    Mokpo--Daejeon
+\pscustom[linecolor=white,linewidth=.5pt,linestyle=dashed,dash=4pt 4pt,linearc=.2]{%
+\psline(2.2,-87.3)(2.5,-87.1)(2.65,-86.85)(2.7,-86.8)(2.75,-86.6)% 목포--광주
+(2.5,-86.4)(3.2,-85.25)% 전주
+(3.3,-84.6)(3.45,-84.35)(3.6,-84.3)(3.65,-84.3)(3.75,-84.2)% --대전  
+\stroke[linewidth=3\pslinewidth,linecolor=black,linestyle=solid]}
+
+
+% (3) 서울--신의주    Seoul--Sinŭiju
+\pscustom[linecolor=white,linewidth=.5pt,linestyle=dashed,dash=4pt 4pt,linearc=.15]{%
+\psline(3.05,-81.9)(2.9,-81.2)(2.3,-81.15)% 서울--개성
+(2.5,-80.65)(2.3,-80.2)(1.5,-80.1)(1.15,-79.25)(1.1,-79.1)% --평양
+(1.05,-78.5)(.9,-77.95)% 안주 
+(.7,-77.85)(.6,-77.9)(.5,-77.95)(.3,-77.9)(0,-77.8)(-.3,-77.6)(-.5,-77.5)(-.6,-77.4)
+(-.65,-77.3)(-.7,-77.1)(-.9,-76.95)% 신의주
+\stroke[linewidth=3\pslinewidth,linecolor=black,linestyle=solid]}
+
+
+% (4) 신의주--톈진    Sinŭiju--Tianjin
+\pscustom[linecolor=white,linewidth=.5pt,linestyle=dashed,dash=4pt 4pt,linearc=.25]{%
+\psline(-.9,-76.95)(-1.2,-76.5)(-1.4,-76)(-1.6,-75.7)(-1.65,-75)(-1.7,-73.9)(-1.8,-73.8)(-1.8,-73.4)% 신의주--쑤자툰--선양  
+(-2.5,-72.8)(-3,-72.9)% -->톈진
+\stroke[linewidth=3\pslinewidth,linecolor=black,linestyle=solid]}
+
+
+% (5) 안주--랴오위안--쓰핑    Anju--Liaoyuan--Siping
+\pscustom[linecolor=white,linewidth=.5pt,linestyle=dashed,dash=4pt 4pt,linearc=.1]{%
+\psline(.9,-77.97)(.95,-77.8)(1.35,-77.75)(1.7,-77.3)(1.88,-76.6)% 희천
+(2.1,-76)(2.5,-75.4)(2.33,-75.2)% 강계
+(2.1,-75.1)(2,-74.95)(1.9,-74.87)% 만포
+(1.6,-75)(1.9,-74.3)(1.6,-73.6)(1.4,-73.7)% 통화
+(1.1,-73.6)(1,-73.5)(1.1,-73.3)(1.15,-73.1)(1.1,-72.9)(1.05,-72.8)(1,-72.7)(1.1,-72.2)(.2,-71.5)% 랴오위안
+(0,-71.47)(-.2,-71.42)(-.4,-71.3)(-.9,-71)% 쓰핑
+(-1.2,-70.7)(-1.5,-70.5)(-2.2,-70)(-3,-69.5)% -->... 
+\stroke[linewidth=3\pslinewidth,linecolor=black,linestyle=solid]}
+
+
+% (6) 쑤자툰--다롄     Sujiatun--Dalian
+\pscustom[linecolor=white,linewidth=.5pt,linestyle=dashed,dash=4pt 4pt,linearc=.4]{%
+\psline(-1.8,-73.77)(-2,-74.3)(-2.2,-74.6)(-2.4,-74.75)(-2.7,-74.9)(-3.05,-74.95)% 쑤자툰--안산 -->다롄
+\stroke[linewidth=3\pslinewidth,linecolor=black,linestyle=solid]}
+
+	
+% (7) 선양--(랴오위안)--창춘    Shenyang--(Liaoyuan)--Changchun
+\pscustom[linecolor=white,linewidth=.5pt,linestyle=dashed,dash=4pt 4pt,linearc=.05]{%
+\psline(-1.8,-73.6)(-1.6,-73.5)% 푸순 (Fushun)
+(-1.5,-73.45)(-1.2,-73.4)(-1,-73.35)(-.8,-73.25)
+(-.5,-73.2)(-.3,-73.1)(-.1,-73.05)(.15,-72.9)
+(.7,-72.5)(.95,-72.3)(.95,-72.2)(1.1,-72.1)
+(1.4,-71.95)(1.53,-71.95)
+(1.8,-71.7)(1.8,-71.6)(1.9,-71.4)
+(2.1,-71.3)(2,-71.25)(1.9,-71.1)
+(1.7,-71)(1.55,-70.8)(1.5,-70.72)(1.48,-70.6)(1.25,-70.3)(1.3,-70.1)(1.12,-69.5)
+\stroke[linewidth=3\pslinewidth,linecolor=black,linestyle=solid]}
+
+
+% (8) 선양--쓰핑--창춘    Shenyang--Siping--Changchun
+\pscustom[linecolor=white,linewidth=.5pt,linestyle=dashed,dash=4pt 4pt,linearc=.05]{%
+\psline(-1.8,-73.4)(-1.35,-72.2)(-.93,-71)% 쓰핑
+(-.4,-70.4)(.2,-69.5)
+\stroke[linewidth=3\pslinewidth,linecolor=black,linestyle=solid]}
+
+
+% (9) 블라디보스토크    Vladivostok
+\pscustom[linecolor=white,linewidth=.5pt,linestyle=dashed,dash=4pt 4pt,linearc=.2]{%
+\psline(9.75,-70.4)(10,-70)(9.75,-69.65)
+\stroke[linewidth=3\pslinewidth,linecolor=black,linestyle=solid]}
+
+

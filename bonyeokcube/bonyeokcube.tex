@@ -1,0 +1,40 @@
+%%%		bonyeokcube.tex :: mito / nyamcoder
+\documentclass{article}
+\usepackage{fontspec}
+\font\BT="한컴바탕" at 96pt	%  은 바탕/HWP  (unfonts fkt.en hier nicht sehr gut) 
+\font\GT="휴먼고딕" at 96pt	%  은 돋움/HWP 
+\usepackage{pst-3d,pgf,xcolor}
+\begin{document}
+\begin{pspicture}(0,3)
+%\psgrid[gridcolor=red](0,0)(-4,-2)(3,6) % 2D-Gitter der Abbildung
+\psset{viewpoint=1 1.5 0.5}
+%\ThreeDput{\psgrid(-2,-2)(6,6)} % x-y-Gitter im 3D-System
+\pgfsetfillopacity{0.5}
+\GT
+\ThreeDput(0,0,0){\psframe*[linecolor=.!60](4,4)}
+\ThreeDput(2,2,0){\magenta\rotatedown{과}}
+\ThreeDput[normal=0 -1 0](0,0,0){\psframe*[linecolor=.!50](4,4)}
+\ThreeDput[normal=0 1 0](2,0,2){\cyan 內}
+\ThreeDput[normal=1 0 0](0,0,0){\psframe*[linecolor=.!70](4,4)}
+\ThreeDput[normal=1 0 0](0,2,2){\blue 容}
+\BT
+\ThreeDput[normal=0 -1 1](0,0,3.985){\psframe*[linecolor=.!15](4,4)}
+\ThreeDput[normal=0 -1 1](3,3,5.9){\red\rotatedown{譯}}
+\pgfsetfillopacity{1}{
+\ThreeDput[normal=1 1 0](2,2,3.52){\white ●}
+\ThreeDput[normal=1 1 0](2,2,3.52){\rotatebox{90}{☯}}}
+\pgfsetfillopacity{.5}
+\fontspec{휴먼궁서}\fontsize{96}{96}\selectfont	%  은 돋움/HWP 
+\ThreeDput[normal=1 0 0](4,-1.995,-.46){\psframe*[linecolor=yellow!30](4,4)}
+\ThreeDput[normal=1 0 0](4,0,2){\green 모}
+\ThreeDput[normal=0 1 0](5,3.485,.038){\psframe*[linecolor=red!20](4,4)}
+\ThreeDput[normal=0 1 0](3.2,3.5,2){\color{lime} 양}
+\end{pspicture}
+\end{document
+
+%%% docs: fontspec.pdf, xltxtra.pdf, pst-3d.pdf, pgfmanual.pdf, xcolor.pdf, pstricks-doc.pdf, xltxtra.pdf
+
+compilation:
+
+$ xelatex bonyeokcube
+

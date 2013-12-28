@@ -1,0 +1,54 @@
+\documentclass{article}  %%% ktree.tex :: mito / nyamcoder %%%
+\usepackage{CJKutf8} %  또는 hangul/kotex 을 상용
+\usepackage{pstricks,pst-xkey,pst-jtree}
+\pagestyle{empty}
+
+\begin{document}
+\begin{CJK}{UTF8}{mj}
+\vspace*{-3cm}
+
+\begin{center}
+\jtree[xunit=2em,yunit=1.5em]
+\! = {즉} ({-나}[labelgap=.7em]) :[scaleby=3]!a !c .
+\!a = :!b {가능하-,}.
+\!b = :{학습으로} :{수행능력의\qquad} {향상이}.
+\!c = :{문학은} :!d [scaleby=4]:{문학적,} :{ 예술적이어야 \quad} :{하는} {것이다.}.
+\!d = :!e [scaleby=2]:{재표현의\qquad\quad} {글쓰기가}.
+\!e = :{예술의\quad} {영역이므로}.
+\endjtree\\[1em]
+\end{center}
+
+\noindent  즉 학습으로 수행능력의 향상이 가능하나,  문학은 예술의 영역아므로 재표현의 글쓰기가 문학적, 예술적이어야 하는 것이다.\\[3em]
+\small
+%\begin{center}
+\hspace*{-3.35em}
+\jtree[xunit=2em,yunit=1.5em]
+\! = {Das heißt, dass} ({-- aber}[labelgap=.85em]) :[scaleby=4]!a !d .
+\!a = :[scaleby=3]!b !c .
+\!b = :{es} :{zwar} :{möglich} {ist,}.
+\!c = :{das Niveau\qquad} :{\shortstack{übersetzerischer\\Fertigkeiten}\qquad\qquad} :{\shortstack{durch\\Einübung}} {\qquad\quad zu erhöhen --}.
+\!d = :!g [scaleby=4]:{\shortstack{sollte sich\\das}} [scaleby=5]:!f [scaleby=4]:{widerspiegeln\qquad} :[scaleby=2]!h {\qquad\,\textbf{.}}.
+\!g = :{da} :{die Literatur\qquad} :{\quad\shortstack{eine\\Kunstform}} {ist,}.
+\!f = :{in den\qquad} :{\shortstack{schriftlichen\\[-.3em]Übertragungen der}\qquad\qquad}{\qquad\quad Ausdrücke}@X .
+\!h = :{, die\quad}@Y :{von} :[scaleby=2]!i :{Wert\quad}{\quad sein müssen(,)}.
+\!i = :{\shortstack{literarischem\\\quad}\qquad} {\shortstack{und\\\qquad\qquad künstlerischem}}.
+\nccurve[angleA=235,angleB=260,linestyle=dashed]{->}{Y}{X}
+\endjtree\\[1em]
+%\end{center}
+
+\normalsize\noindent
+Das heißt, dass es zwar möglich ist, das Niveau übersetzerischer Fertigkeiten durch Einübung zu erhöhen -- aber da die Literatur eine Kunstform ist, sollte sich das in den schriftlichen Übertragungen der Ausdrücke widerspiegeln, die von literarischem und künstlerischem Wert sein müssen.
+
+\end{CJK}
+\end{document}
+
+* compilation
+$ latex ktree.tex
+$ dvips ktree.dvi
+$ ps2pdf ktree.ps
+
+* documentation
+/usr/share/texlive/2008/texmf-dist/doc/generic/pst-jtree/pst-jtree-doc.pdf 
+
+* KO+EN souce text from:
+M. ­K. Choi/최미경,한국문학번역고육: 이론과 실제, in: 1st International Translators’ Conference – Korean Culture in Europe: Achievements and Prospects, Korea Literature Translation Institute (ed.), Seoul 2007, vol. II, p507f/p518

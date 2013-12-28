@@ -1,0 +1,18 @@
+\documentclass{article}	%% 3dmunja.tex :: mito / nyamcoder
+\usepackage{hangul}
+%\usepackage[usenames]{color} % zb {\color{Plum}{\Huge 문자와\enskip 표기}} 
+\usepackage{pst-3d}	% color automatisch geladen; pstricks nicht nötig 
+\begin{document}
+\타자 %\color{teal}   \fontfamily{tz} 
+\psshadow[Tshadowangle=50,Tshadowcolor=lightgray,Tshadowsize=500]
+   {\lightgray\rule{5.5cm}{.1pt}}\vspace{-.9cm}\\
+\hspace*{.85cm}
+\psshadow[Tshadowangle=50,Tshadowcolor=teal,Tshadowsize=2]
+   {\Huge 문자와\enskip 표기}
+\end{document}
+
+--> color-standard-farben; lgc: xiv, color plate b 
+--> kompilation:
+
+$ lambda 3dmunja && dvips 3dmunja && ps2pdf 3dmunja.ps
+

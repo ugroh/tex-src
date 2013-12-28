@@ -1,0 +1,87 @@
+\documentclass{article}\pagestyle{plain} %%%%%%%%% ybocg.tex :: mito / nyamcoder %%%%%%%%%
+\usepackage{fontspec} \setmainfont[BoldFont={휴먼태고딕}]{휴먼명조}\setsansfont{휴먼고딕} % xelatex 을 사용
+\newcommand\HAN{\fontspec[FakeBold=3,FakeStretch=0.8,Vertical=RotatedGlyphs]{새돋움}\fontsize{28}{28}\selectfont\kern-.3em}
+\newcommand\ZH{\fontspec[FakeBold=2,FakeStretch=0.8,Vertical=RotatedGlyphs]{휴먼궁서}\fontsize{28}{28}\selectfont\kern-.3em}
+\newcommand\zh{\fontspec[FakeStretch=1.1,Vertical=RotatedGlyphs]{휴먼궁서}\fontsize{17}{17}\addfontfeature{LetterSpace=24}\selectfont}  %  이전 글꼴에서 맞지 않은 한자의 대체:
+\newcommand\mun{\fontspec[FakeBold=2,Vertical=RotatedGlyphs]{새바탕}\fontsize{17}{17}\selectfont}
+\newcommand\SP{\hspace{.45em}\makebox[0cm][r]{\raisebox{.2em}{\mun °}}\hspace{-.4em}}	% 쉼표1
+\newcommand\MP{\hspace{-.3em}\makebox[0cm][l]{\raisebox{.52em}[0cm][0cm]{\mun °}}\hspace{.2em}} % 마침표1
+\newcommand\sp{\hspace{-.05em}\makebox[0cm][l]{\raisebox{.24em}{\mun °}}\hspace{.38em}}	% 쉼표2
+\renewcommand\mp{\hspace{-.05em}\makebox[0cm][l]{\raisebox{.52em}[0cm][0cm]{\mun °}}\hspace{.38em}}%마침표2
+\newcommand\sabib[1]{\hspace*{.42em}\mun #1\hspace{.25em}\zh} % 為=爲= 为 wèi/wéi/위; 澥 xiè/해
+\newcommand\dia{\fontspec{새바탕}\fontsize{20}{20}}
+\newcommand\gs{\hspace{-.2em}\makebox[0em][l]{\raisebox{-.55em}[0cm][0cm]{\hspace{.035em}\dia\,.}}}% 거성1
+\newcommand\sa{\hspace{-.12em}\makebox[0cm][l]{\raisebox{-.55em}[0cm][0cm]{\dia ..}}\hspace{-.05em}}% 상 성
+\newcommand\GS{\hspace{-20.3em}\makebox[0em][r]{\raisebox{-.3em}[0cm][0cm]{\dia\addfontfeature{FakeBold=4}.\hspace{1.9em}.}}}	% 거성2 (\gs 는가 여기서 안됨)
+\usepackage{color}		% 아래아의 선모양을 점모양으로 수정:
+\newcommand\araeA{\hspace{-9.78cm}\makebox[0em][r]{\color{white}\rule[-2mm]{2mm}{4mm}\hspace{.6em}\rule[-2mm]{2mm}{3.4mm}}}
+\newcommand\araeB{\hspace{.03cm}\makebox[0em][r]{\Large\textbullet\hspace{1.13em}\textbullet}}
+\newcommand\araeC{\hspace{-1.33cm}\makebox[0em][r]{\raisebox{.6em}{\color{white}\rule[-1.6mm]{2mm}{3.4mm}}}}
+\newcommand\araeD{\hspace{.055cm}\makebox[0em][r]{\raisebox{.377em}{\Large\textbullet}}}
+\usepackage{boxedminipage}
+\usepackage{rotating}	% alternativ: pstricks: \rotatedown{...} etc. oder \begin{rotatedown}...\end{rotatedown}
+\usepackage{multirow}	% lb2-281f für Tabellenzellen, die mehrere Zeilen hoch sind
+\usepackage{booktabs}	% lb2-277ff für spez. horiz. linienabstände
+\usepackage{array}	% hier für die korr. berechnung für tab.rahmen mit dicken linien
+\newcommand\myrule{\vspace{-.97cm}\\\rule{1\linewidth}{.3pt}\\[-.35cm]} %  특별한 선과 선의 간격
+\usepackage{caption}	% lb2-322
+\DeclareCaptionLabelSeparator{dash}{ \textendash\ }
+\DeclareCaptionStyle{gothic}{labelfont=bf,textfont=sf,justification=centering}
+\captionsetup[figure]{style=gothic,labelsep=dash}
+\renewcommand\figurename{삽화} % caption/figure를 개칭함
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{figure}\centering
+\begin{boxedminipage}[c]{123.4mm} \setlength\fboxsep{-.1pt}\setlength\arrayrulewidth{5pt}
+\begin{tabular}{c@{\hspace{3pt}}|}\hline\\ \\[-29pt]
+	\begin{turn}{270}
+	\begin{boxedminipage}[c]{161mm}\vspace{-2mm}
+		\begin{tabular*}{161mm}{l}  % 용비어천가권제일
+			\,\ZH 龍飛御天歌卷第一}\\\specialrule{.3pt}{5mm}{-2mm}
+			\,\ZH 海東\hspace{.6em}六龍\HAN\,\,\gs이\gs샤\sa\SP일\sa마다\hspace{.05em}\ZH 天福\HAN\,\,\gs이시\gs니\MP\hspace{.25em}\ZH 古聖\HAN\,\,\gs이\hspace{-.22em}\SP}\araeA\raisebox {-.07em{\araeB}}\\\specialrule {.3pt}{5.5mm}{-3.2mm}  %  동해 육룡·이 샤  ,:일:마다천복·이시·니.고성·이,
+		\end{tabular*}\\
+		\begin{tabular}{ll}
+			\multirow{2}{3.36cm}[1.6mm]{\,\ZH 同符\,\HAN시니} % 동부·하시·니
+			&\zh 海\sp 晦也\km 取其荒遠冥昧之稱\mp 四海之外\sp\\% 해,회야,취기황원명매지칭.사해지외,
+			&\zh 皆復有海\mp 東海之別有渤\hspace{0.05em}\sabib{澥}\hspace{-0.37em}\sp 故東海共\GS\araeC\araeD\\\addlinespace[5mm] % 개후유해.동해지별유발해, 고동해공
+		\end{tabular}\\\myrule
+		\renewcommand{\baselinestretch}{.65}
+		\zh 稱渤海\sp 又通謂之滄海\mp 我國在渤海之東\sp 故云海東\\% 칭발해,우통위지창해.아국재발해지동,고운해동
+		也\mp 易曰\mp 時乘六龍以御天\mp 又曰\mp 飛龍在天\sp 利見大人\mp\\\myrule
+			% 야.역왈.시승룍룡이어천.우왈.비용재천,이견대인.
+		龍之\sabib{為}物\sp 靈變不測\sp 故以象聖人進退也\mp 我\hspace{1.67em}朝自\\
+			% 용지위물,령변불측,고이상성인진퇴야. 아 조자
+		穆祖至\hspace{1.67em}太宗\sp 凡\hspace{1.67em}六聖\sp 故借用六龍之語也\mp 天福\sp\\\myrule
+			%  목조지 태종, 범 륙성,고차용육룡지어야.천복,
+		謂天之福祿也\mp 左傅曰\mp 商頌有之曰\sp 不借不濫\sp 不敢\\% 위천지복녹야.좌부일상송유지일,불차불람,불감
+		\hspace*{-.35em}\sabib{為}皇\sp 命于下國\sp 封建厥福\sp 此湯所以獲天福也\mp 聖\sp 通\\\myrule
+			% 위황명우하국,봉건궐복,차탕소이획천복야.성,통
+		明之稱也\mp 符\sp 方無切\mp 符之\sabib{為}言\sp 扶也\sp 兩相扶合而不\\
+			% 명지칭야,부방무절.부지위언,부야,양상부합이불
+		差也\mp 盂子曰\mp 舜文王相去\sp 千有餘歲\sp 若合符節也\mp 註\mp\\\myrule
+			% 차야.우자왈.순문왕상거,천유여세,약합부절야.주.
+		符節\sp 以玉\sabib{為}之\sp 篆刻文字而中分之\km 彼此各藏其半\sp\\
+			% 부절,이옥위지,전각문자이중분지,피차장각기반,
+		有故則左右相合以\sabib{為}信也\mp 若合符節\sp 言其同也\\\myrule
+			% 유고칙좌우상합이위신야.약합부절,언기동야
+		\hspace*{-.5em}\rule{0pt}{9.5mm}
+		\ZH 海東\hspace{.64em}六龍飛莫非天所扶\MP 古聖同符\\%  해동 육룡,비막비천소부.고성동부
+	\end{boxedminipage}
+	\end{turn}\\[-9pt]\\\hline
+\end{tabular}\\[2.2pt]
+\end{boxedminipage}
+\renewcommand{\baselinestretch}{1}
+\setcounter{figure}{22}
+\caption{용비어천가(龍飛御天歌, 1445$\sim$1447년/ 세종 27$\sim$29 년에 간행,\\ 보물 1463호)  서사 제1 장 조선왕조 창업을 송축(頌祝) 한 악장의 디지털 모조}
+\end{figure}
+\end{document}
+
+
+* compilation
+
+$ xelatex ybocg
+
+
+* original text/image source for 용비어천가 龍飛御天歌 to be found at
+
+http://haksunje.com/shop/shopdetail.html?branduid=46

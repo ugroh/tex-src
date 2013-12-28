@@ -1,0 +1,8 @@
+necessary external database for pst-map2d
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* download
+
+http://melusine.eu.org/syracuse/mluque/mappemonde/wdb.zip
+
+* and unzip here (or any other path you defined in \psset)

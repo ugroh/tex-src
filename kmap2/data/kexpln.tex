@@ -1,0 +1,133 @@
+%%%%%% korea2, layer3 -- legend and other additions / 설명 
+%%%   kexpln.tex :: mito / nyamcoder
+
+
+%%% railroad direction pointers / 철도 방향 지기
+\pnodeMap(122.88,41.35){toDalian}
+  \uput[0](toDalian){\sf\scriptsize\shortstack{다롄\\$\longleftarrow$}} % vs. \rput, pos. only directly at coor.
+\pnodeMap(122.84,42.46){toTianjin}
+  \uput[0](toTianjin){\sf\scriptsize\shortstack{북경\\톈진\\$\longleftarrow$}}
+\pnodeMap(125.28,43.67){toChangchun}
+  \uput[0]{-90}(toChangchun){\sf\scriptsize\shortstack{창춘\\$\longleftarrow$}}
+\pnodeMap(129.33,43.54){toHarbin1}
+  \uput[0]{-90}(toHarbin1){\sf\scriptsize{$\longleftarrow$}}
+\pnodeMap(129.3,43.35){toHarbin2}
+  \uput[0](toHarbin2){\sf\scriptsize{하얼빈, 블라디보스토크}}
+
+% longitude--경도
+\pnodeMap(125,43.74){t125}
+  \rput(t125){$125^\circ$}
+\pnodeMap(130,43.56){t130}
+  \rput(t130){$130^\circ$}
+\pnodeMap(125,31.97){b125}
+  \rput(b125){$125^\circ$}
+\pnodeMap(130,31.78){b130}
+  \rput(b130){$130^\circ$}
+
+% latitude--위도 
+\pnodeMap(123.115,40){l40}
+  \rput{-90}(l40){$\enskip 40^\circ$}
+\pnodeMap(132.6,40){r40}
+  \rput{90}(r40){$\enskip 40^\circ$}
+\pnodeMap(125.105,35){l35}
+  \rput{-90}(l35){$\enskip 35^\circ$}
+\pnodeMap(132.1,35){r35}
+  \rput{90}(r35){$\enskip 35^\circ$}
+
+%%% outer frame / 곁틀
+\psset{unit=1cm}	% cm를 필여 있음!; lgc218 
+\psframe[framearc=.018,linewidth=.5pt](-3,-93)(11.5,-69.7)
+
+%%% header / 지도 표제
+\psset{linecolor=Tan,fillcolor=Tan,shadow=true,shadowcolor=Maroon,shadowsize=.05cm}
+\bfseries\fontsize{30}{30}\selectfont	% emulated from 24.88pt
+\rput(.2,-70.8){\pscharpath{한국전도}}
+
+%%% caption / 지도 설명
+\psset{linecolor=black} 
+\psframe[fillcolor=Seashell,linewidth=.5pt](-2.85,-92.6)(-.13,-83)
+\mdseries\fontsize{8}{8}\selectfont
+
+% cultivation 
+\rput(-1.49,-83.3){\it 곡물 재배}	% -.03 
+\rput(-2.38,-83.7){\scalebox{.7}{\byeo\vspace*{-1em}\raisebox{.3em}{\byeo}}}
+   \rput(-1.88,-83.7){벼}
+\pscustom[linestyle=none]{\psframe(-2.13,-84.25)(-2.63,-83.95)
+\fill[fillstyle=solid,fillcolor=LemonChiffon]
+\fill[fillstyle=vlines,hatchcolor=Magenta,hatchwidth=.5pt]}
+   \rput(-1.88,-84.1){밀}
+\pscustom[linestyle=none]{\psframe(-2.63,-84.65)(-2.13,-84.35)
+\fill[fillstyle=solid,fillcolor=Bisque]
+\fill[fillstyle=hlines,hatchcolor=PaleGreen,hatchwidth=.5pt]}
+   \rput(-1.755,-84.5){수수}
+\rput(-1.1,-83.7){\kong\raisebox{.5em}{\kong}}
+   \rput(-.7,-83.7){콩}
+\rput(-1.1,-84.1){\cha\raisebox{.5em}{\cha}}
+   \rput(-.73,-84.1){차}
+\rput(-1.1,-84.5){\scalebox{.9}{\dambae}}
+   \rput(-.58,-84.5){담배}
+
+% mineral ressources 
+\rput(-1.49,-85){\it 지하 자원}
+\psdot*[dotstyle=BoldDiamond,dotscale=2](-2.38,-85.4)
+   \rput(-1.88,-85.4){석탄}
+\psdot[dotstyle=BoldDiamond,fillcolor=Brown,dotscale=2](-2.38,-85.8)
+   \rput(-1.88,-85.8){갈탄}
+\psdot[dotstyle=BoldDiamond,fillcolor=DodgerBlue,dotscale=2](-2.38,-86.2)
+   \rput(-1.88,-86.2){철광}
+\psdot[dotstyle=BoldDiamond,fillcolor=red,dotscale=2](-1.1,-85.4)
+   \rput(-.58,-85.4){동광}
+\psdot[dotstyle=BoldDiamond,fillcolor=Coral,dotscale=2](-1.1,-85.8)
+   \rput(-.58,-85.8){정제}
+\psdot[dotstyle=BoldDiamond,fillcolor=Yellow,dotscale=2](-1.1,-86.2)
+   \rput(-.58,-86.2){금광}
+\psdot[dotstyle=BoldDiamond,fillcolor=Green,dotscale=2](-2.38,-86.6)
+   \rput(-1.64,-86.6){납\,·\,아연}
+
+% industries 
+\rput(-1.49,-87.1){\it 공업 생산}
+\rput(-2.38,-87.5){\textcolor{SteelBlue}{\Industry}}
+   \rput(-1.315,-87.5){철\,·\,강철 생산}
+\rput(-2.38,-87.9){\textcolor{Coral}{\Industry}}
+   \rput(-1.27,-87.9){비철금속 제련}  
+\rput(-2.38,-88.3){\textcolor{Gray}{\Industry}}
+   \rput(-1.27,-88.3){알루미늄 제철}
+\psdot[dotstyle=Bo,fillcolor=SteelBlue,dotscale=2](-2.38,-88.8)
+   \rput(-1.48,-88.7){금속 공업\,·}
+   \rput(-1.55,-89){기계 제작}
+\rput(-2.37,-89.4){\textcolor{SteelBlue}{\anchor}}
+   \rput(-1.87,-89.4){조선}
+\psdot[dotstyle=BoldPentagon,fillcolor=BlueViolet,dotscale=2](-2.38,-89.8)
+   \rput(-1.6,-89.8){정유공장}
+\psdot[dotstyle=Bo,fillcolor=Yellow,dotscale=2](-2.38,-90.2)
+   \rput(-1.55,-90.2){화학 공업}
+\psdot[dotstyle=Bo,fillcolor=YellowGreen,dotscale=2](-2.38,-90.6)
+   \rput(-1.55,-90.6){섬유 산업}
+
+% 일반
+\psdot*[dotstyle=triangle](-2.38,-91.25)
+   \rput(-2.05,-91.25){산}
+\psset{shadow=false}
+\psline[doubleline=true,linewidth=.5pt] (-1.63,-91.25)(-.98,-91.25) %  (-1.45,-91.25)(-.88,-91.25) 
+\psline[linestyle=dashed,dash=4pt 4pt,linewidth=.5pt](-1.63,-91.25)(-.98,-91.25)
+   \rput(-.61,-91.25){철도}
+\psdot[dotstyle=triangle,linecolor=red,fillcolor=red](-2.38,-91.65)
+   \rput(-1.9,-91.65){화산}
+\fontsize{6}{6}\selectfont
+\rput(-2.13,-92.05){\textcolor{DarkSeaGreen}{\sf\textbf{옌지(연길)}}}
+  \rput(-.63,-92.05){중국}
+  \rput(-1.51,-92.3){연변조선족자치주의\,도시}
+
+%%% scale/축척
+%\psset{shadow=false}
+\rput(9.7,-73.1){축척 $1:6\,000\,000$}
+   \psline[doubleline=true,linewidth=.7pt](8.5,-73.5)(10.9,-73.5)
+   \psline[linestyle=dashed,dash=8mm 8mm,linewidth=.8pt](8.5,-73.5)(10.9,-73.5)
+\fontsize{5}{5}\selectfont
+   \rput(8.5,-73.35){0}
+   \rput(9.3,-73.35){50}
+   \rput(10.1,-73.35){100}
+   \rput(10.9,-73.35){150}
+   \rput(11.25,-73.35){km}
+\fontsize{6}{6}\selectfont
+\rput(9.7,-73.9){\shortstack{지도의 1cm는 실제의\\[-.3em] 60km와 일치합니다.}}

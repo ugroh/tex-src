@@ -1,0 +1,22 @@
+\documentclass{article}	%%% munjang.tex :: mito / nyamcoder %%%
+\usepackage{CJKutf8}	% 또는 hangul/kotex과 사용
+\usepackage{pstricks,pst-xkey,pst-jtree}
+\pagestyle{empty}
+
+\begin{document}
+\begin{CJK}{UTF8}{mj}
+\vspace*{-3cm}
+\begin{center}
+\jtree 
+\! = {S} "{\psset{scaleby=2 1}} :{NP}!a [scaleby=2 8]{VP}<vartri>{번역교육위해서 필요합니다.}.
+\!a = :{VP}!b ({NP}{것이}).
+\!b = <left>({NP}{매일}) ^<vert>({NP}{단어를}) ^<right>({V}{공부하는}).
+\endjtree\\[2em]
+\footnotesize S\,$=$\,문장\qquad V\,$=$\,술어\qquad NP\,$=$\,명사구\qquad VP\,$=$\,동사구
+\end{center}
+\end{CJK}
+\end{document}
+
+* compilation
+
+$ latex munjang && dvips munjang && ps2pdf munjang.ps

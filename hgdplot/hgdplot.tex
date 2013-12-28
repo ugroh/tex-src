@@ -1,0 +1,27 @@
+%%% 홍길동전(洪吉童傳)    --   hgdplot.tex :: mito / nyamcoder
+
+\documentclass{article}
+\usepackage{hangul}		% EUC-KR -- needs lambda-compilation for UTF-8
+\usepackage{pst-plot,pst-text,pst-grad}
+\newcommand\textde{Hong Gil Dong (Hangeul: 홍길동; Hanja: 洪吉童) ist eine klassische fiktive Figur aus der koreanischen Volkserzählung »Die Geschichte von Hong Gil Dong«, die in der Joseon-Dynastie verfasst wurde. Der Autor dieser Geschichte war Huh Gyun, der die Geschichte vermutlich im späten 16. oder frühen 17. Jahrhundert schrieb. Die Figur hat große Ähnlichkeit mit dem britischen Volkshelden Robin Hood, indem auch Hong Gil Dong dafür berühmt gewesen ist, die Reichen auszurauben und die Beute unter den Armen zu verteilen.\quad Der Verfasser Huh Gyun (허균) gilt heute als der Autor des ersten koreanischen Romans. Er wurde in die intellektuelle Schicht des konfuzianistischen Koreas hineingeboren. Sein Halbbruder Huh Sung war zu dieser Zeit ein berühmter Dichter und seine Schwester Huh Nanseolheon eine der wenigen Dichterinnen Koreas. Politisch träumte er lange Zeit von einer egalitären Gesellschaftsordnung ohne Unterdrückung durch eine Hierarchie.\quad Die Geschichte von Hong Gil Dong\quad Aufgrund der strengen konfuzianischen Gesetze war Huh gezwungen, seine politischen Gedanken in diesem Roman niederzuschreiben. Hong Gil Dong wird als uneheliches Kind geboren und von seinem Vater nicht akzeptiert. Nachdem sein Vater von einem Schamanen erfährt, dass sein Sohn verflucht sei, versucht er diesen zu töten, was ihm jedoch misslingt. Entsetzt wendet sich Hong von seinem Vater ab und zieht hinaus in die Welt um ein Banditenanführer zu werden. Allerdings bestiehlt er nur die Reichen und verteilt seine Beute an Bedürftige. Dadurch wächst seine Popularität bei der ländlichen Bevölkerung, wo er schnell zu einem Volkshelden aufsteigt. Die Regierung unter Yeonsangun versucht ihn als einen Nationalverräter zu verhaften, scheitert jedoch immer wieder. Letztendlich wird ihm um ihn unter Kontrolle zu halten der Posten des Kriegsministers angeboten, den er annimmt.}
+
+\DeclareFixedFont{\고딕}{UHC}{gt}{b}{sl}{5cm}
+\begin{document}
+\thispagestyle{empty}
+\begin{pspicture}(0,17)
+\pstextpath(1,-.5ex)
+{\pscharpath*[linestyle=none,fillstyle=gradient,gradangle=45,gradmidpoint=0.5]{%
+\고딕\shortstack{홍\\[20pt]길\\[20pt]동\\[7pt]전}}}{\tiny\textde}
+\end{pspicture}
+\end{document}
+
+* text source
+
+https://de.wikipedia.org/wiki/Hong_Gil_Dong
+
+
+* compilation
+
+$ lambda hgdplot && dvips hgdplot &&  ps2pdf hgdplot.ps
+
+

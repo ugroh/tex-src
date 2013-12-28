@@ -1,0 +1,85 @@
+%%%%%% korea2, layer2d -- diverse
+%%% kdata.tex :: mito / nyamcoder
+
+% \psset{unit=39} % for standalone
+
+%%% rice / 벼
+\newcommand\byeo{\large\textcolor{DarkOliveGreen}{\textproto{\Asade}}} % --> protosem.sty
+\pnodeMap(126.55,36.76){rice1}\rput(rice1){\byeo} % 공주
+\pnodeMap(127,36.35){rice2}\rput(rice2){\byeo\enskip\byeo} % 대전
+\pnodeMap(126.65,35.35){rice3}\rput(rice3){\shortstack{\quad\byeo\\\qquad\byeo\\\quad\,\byeo\\\hspace{-.53em}\raisebox{.3em}{\byeo}}} % 전주
+\pnodeMap(126.37,33.3){rice4}\rput(rice4){\byeo\hspace{-.7ex}\raisebox{.25ex}{\byeo}} %  제주
+\pnodeMap(127.65,35.1){rice5}\rput(rice5){\shortstack{\enskip\byeo\\\byeo}} % 여수
+\pnodeMap(128.38,35.22){rice6}\rput(rice6){\shortstack{\byeo\\[-.5ex]\enskip\byeo}} % 부산
+\pnodeMap(128.7,35.8){rice7}\rput(rice7){\byeo\raisebox{2em}{\byeo}} % 대구
+\pnodeMap(129.23,36.3){rice8}\rput(rice8){\byeo} % 포항
+\pnodeMap(127.5,36.9){rice9}\rput(rice9){\byeo} % 원주
+\pnodeMap(126.3,38.05){rice10}\rput(rice10){\byeo} % 개성
+\pnodeMap(125.85,38.35){rice11} % 해주
+\rput(rice11){{\shortstack{\enskip\,\byeo\hspace{1.2em}\raisebox{-.9em}{\byeo\raisebox{-.9em}{\byeo}}\\[-1.5em]
+\hspace*{-3em}{\byeo}\raisebox{-.7em}{\quad\byeo}}}}
+
+%%%  soy beans / 콩
+\newcommand\kong{\scriptsize\textcolor{IndianRed}{\textbf{\Circpipe}}} % --> protosem.sty; textopenbullet
+\pnodeMap(128.53,35.29){soy1}\rput(soy1){\kong} % 창원
+\pnodeMap(128.9,36){soy2}\rput(soy2){\kong\qquad\raisebox{-.5em}{\kong\,\,\kong}} %  대구
+\pnodeMap(126.7,36.45){soy3}\rput(soy3){\kong} %  공주
+\pnodeMap(127.2,38.43){soy4}\rput(soy4){\kong\qquad\raisebox{-.3em}{\kong}} %  금강산
+\pnodeMap(125.25,38.59){soy5}\rput(soy5){\kong} %  남포
+\pnodeMap(125.8,38.4){soy6}\rput(soy6){\kong} %  사리원
+\pnodeMap(125.2,38.15){soy7}\rput(soy7){\kong\qquad\raisebox{-1.8em}{\kong}}  %  해주
+\pnodeMap(125.63,39.5){soy8}\rput(soy8){\kong\enskip\raisebox{-.8em}{\kong}}  %  안주
+\pnodeMap(124.66,39.76){soy9}\rput(soy9){\kong} %  신의주
+\pnodeMap(126.2,38){soy10}\rput(soy10){\kong\,\raisebox{-1.1em}{\kong}\quad\raisebox{-1em}{\kong}} %  개성
+
+%%% tea / 차
+\newcommand\cha{\scriptsize\textcolor{Magenta}{\textproto{\Asade}}} % --> protosem.sty
+\pnodeMap(126.95,35.77){tea}\rput(tea){\shortstack{\cha\\\hspace*{-.9em}\cha\\[-.5em]\quad\cha}}  %  대전
+
+%%% tobacco / 담배
+\newcommand\dambae{\textcolor{Brown}{\textbf{\textleaf}}} % --> textcomp.sty
+\pnodeMap(127.77,36.86){tobacco1}\rput(tobacco1){\large{\dambae}}  %  원주
+\pnodeMap(127.06,36.28){tobacco2}\rput(tobacco2){\tiny{\dambae}}  %  대전
+
+%%% mineral ressources / 지하 자원
+\pnodeMap(127.2,37.37){gold}\psdot[dotstyle=BoldDiamond,fillcolor=Yellow,dotscale=3](gold) % 수원
+\pnodeMap(128.5,40.95){copper}\psdot[dotstyle=BoldDiamond,fillcolor=red,dotscale=2.5](copper) % 혜산
+\pnodeMap(125.45,38.25){iron1}\psdot[dotstyle=BoldDiamond,fillcolor=DodgerBlue,dotscale=2.5](iron1) %  해주
+\pnodeMap(128.8,37.67){iron2}\psdot[dotstyle=BoldDiamond,fillcolor=DodgerBlue,dotscale=2](iron2) %  강능
+\pnodeMap(126.7,36.7){lead1}\psdot[dotstyle=BoldDiamond,fillcolor=Green,dotscale=2.5](lead1) % 공주
+\pnodeMap(128.7,40.6){lead2}\psdot[dotstyle=BoldDiamond,fillcolor=Green,dotscale=2.5](lead2) %  단천
+\pnodeMap(129.4,41.35){bcoal}\psdot[dotstyle=BoldDiamond,fillcolor=Brown,dotscale=2.5](bcoal) % 청진
+\pnodeMap(125.54,39.35){coal1}\psdot*[dotstyle=BoldDiamond,dotscale=2.5](coal1) %  평성
+\pnodeMap(128.85,37.47){coal2}\psdot*[dotstyle=BoldDiamond,dotscale=2.5](coal2) %  강능
+\pnodeMap(129.05,36.85){scoat1}\psdot[dotstyle=BoldDiamond,fillcolor=Coral,dotscale=3.8](scoat1) %  낙동강
+\pnodeMap(127.4,38.6){scoat2}\psdot[dotstyle=BoldDiamond,fillcolor=Coral,dotscale=3](scoat2) % (포항)
+\pnodeMap(127.2,39.87){scoat3}\psdot[dotstyle=BoldDiamond,fillcolor=Coral,dotscale=2.3](scoat3) % 함흥
+
+%%% industrial production / 공업 생산
+\pnodeMap(127.4,38){steel1}\rput(steel1){\textcolor{SteelBlue}{\Large\Industry}} % 서울
+\pnodeMap(125.52,39.2){steel2}\rput(steel2){\textcolor{SteelBlue}{\Large\Industry}} % 평성
+\pnodeMap(129.45,41.8){steel3}\rput(steel3){\textcolor{SteelBlue}{\Large\Industry}} % 청진
+\pnodeMap(127.63,38.94){nonfer}\rput(nonfer){\textcolor{Coral}{\Large\Industry}} % 원산
+\pnodeMap(127.75,40.1){alu1}\rput(alu1){\textcolor{Gray}{\Large\Industry}} %  함흥
+\pnodeMap(125.39,38.92){alu2}\rput(alu2){\textcolor{Gray}{\Large\Industry}} % 평성
+\pnodeMap(126.5,34.95){textile1}\psdot[dotstyle=Bo,fillcolor=YellowGreen,dotscale=2](textil1) % 목포
+\pnodeMap(128.58,35.76){textile2}\psdot[dotstyle=Bo,fillcolor=YellowGreen,dotscale=2](textil2) %  대구
+\pnodeMap(127,38){textil3}\psdot[dotstyle=Bo,fillcolor=YellowGreen,dotscale=2.3](textil3) % 서울
+\pnodeMap(127.3,39.15){textil4}\psdot[dotstyle=Bo,fillcolor=YellowGreen,dotscale=2](textil4) %  원산
+\pnodeMap(129.25,35.4){chem1}\psdot[dotstyle=Bo,fillcolor=Yellow,dotscale=2](chem1) %  울산
+\pnodeMap(126.7,37.8){chem2}\psdot[dotstyle=Bo,fillcolor=Yellow,dotscale=2](chem2) %  서울
+\pnodeMap(125.73,38.9){chem3}\psdot[dotstyle=Bo,fillcolor=Yellow,dotscale=2](chem3) %  평양
+\pnodeMap(127.39,39.88){chem4}\psdot[dotstyle=Bo,fillcolor=Yellow,dotscale=2.5](chem4) %  함흥
+\pnodeMap(130.1,42.2){chem5}\psdot[dotstyle=Bo,fillcolor=Yellow,dotscale=2.5](chem5) % 라선
+\pnodeMap(126.73,36.2){metal1}\psdot[dotstyle=Bo,fillcolor=SteelBlue,dotscale=2.5](metal1) % 군산
+\pnodeMap(126.95,37.36){metal2}\psdot[dotstyle=Bo,fillcolor=SteelBlue,dotscale=2.5](metal2) % 수원
+\pnodeMap(129.3,36.7){metal3}\psdot[dotstyle=Bo,fillcolor=SteelBlue,dotscale=2.5](metal3) % (포항)
+\pnodeMap(127.3,39){metal4}\psdot[dotstyle=Bo,fillcolor=SteelBlue,dotscale=2.5](metal4) % 원산
+\pnodeMap(125.4,39.04){metal5}\psdot[dotstyle=Bo,fillcolor=SteelBlue,dotscale=2.5](metal5) %  평성
+\pnodeMap(124.42,39.9){metal6}\psdot[dotstyle=Bo,fillcolor=SteelBlue,dotscale=2.5](metal6) %  신의주
+\pnodeMap(127.33,39.72){metal7}\psdot[dotstyle=Bo,fillcolor=SteelBlue,dotscale=2.5](metal7) %  흥남
+\pnodeMap(127.5,34.9){raff1}\psdot[dotstyle=BoldPentagon,fillcolor=BlueViolet,dotscale=2](raff1) % 여수
+\pnodeMap(129.4,35.7){raff2}\psdot[dotstyle=BoldPentagon,fillcolor=BlueViolet,dotscale=3](raff2) % 울산
+\pnodeMap(129.5,35.3){ship1}\rput(ship1){\large\textcolor{SteelBlue}{\anchor}} %  울산
+\pnodeMap(126.4,37.4){ship2}\rput(ship2){\textcolor{SteelBlue}{\anchor}} % 인천
+\pnodeMap(125.2,39.27){ship3}\rput(ship3){\textcolor{SteelBlue}{\anchor}} % 평성

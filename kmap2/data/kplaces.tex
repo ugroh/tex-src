@@ -1,0 +1,276 @@
+%%%%%% korea2, layer2c -- discrete places
+%%%   kplaces.tex :: mito / nyamcoder
+
+%%% 장소 놓기 모양의 치수; Herbert Voss 의 http://tug.org/PSTricks/pst-geo/DE.tex파일으로  찾아서
+% \psset{unit=39}
+
+%%% cities NK / 북한의 도시
+% formatting:
+\makeatletter
+\def\bukhandosi{\@ifnextchar*{\@startrue\bukhandosi@i}{\@starfalse\bukhandosi@i*}}
+\def\bukhandosi@i*{\@ifnextchar[{\bukhandosi@ii}{\bukhandosi@ii[DarkRed]}}
+\def\bukhandosi@ii[#1]{\@ifnextchar<{\bukhandosi@iii[#1]}{\bukhandosi@iii[#1]<0>}}%
+\def\bukhandosi@iii[#1]<#2>(#3,#4,#5,#6){%
+	\def\pst@tempA{#6}
+	\ifx\pst@tempA\empty\def\pst@tempB{#5}\else\def\pst@tempB{#6}\fi
+	\pnodeMap(#3,#4){\pst@tempB}
+	\if@star\uput*[#2](\pst@tempB){\color{#1}\sffamily\bfseries#5}
+	\else\uput[#2](\pst@tempB){\color{#1}\sffamily\bfseries#5}\fi
+	\psdot[linecolor=DarkRed](\pst@tempB)\ignorespaces}
+\makeatother
+
+% \bukhandosi(125.753765,39.031859,평양,Pyeongyang) --> kextra
+\bukhandosi<145>(125.66,39.62,안주,Anju)
+\bukhandosi(129.4,42,부윤,Buyun)
+\bukhandosi(129.783333,41.8,청진,Cheongjin)
+\bukhandosi(128.911,40.458,단천,Dancheon)
+\bukhandosi(126.312,39.761,덕천,Deokcheon)
+\bukhandosi<105>(125.906111,39.698611,개천,Gaecheon)
+\bukhandosi<90>(126.55,37.966667,개성,Gaeseong)
+\bukhandosi<-145>(126.6,40.966667,강계,Ganggye)
+\bukhandosi(129.200556,40.667222,김책,Gimchaek)
+\bukhandosi<-90>(125.716667,38.033333,해주,Haeju)
+\bukhandosi<120>(127.536667,39.913056,함흥,Hamheung)
+\bukhandosi<-30>(127.6,39.85,흥남,Heungnam)
+\bukhandosi<-90>(129.75,42.433333,회령,Hoeryong)
+\bukhandosi<180>(126.25,40.25,희천,Huicheon)
+\bukhandosi<-65>(128.183333,41.4,혜산,Hyesan)
+\bukhandosi(126.29,41.157,만포,Manpo)
+\bukhandosi<155>(127.356,39.259,문천,Muncheon)
+\bukhandosi(125.4,38.733333,남포,Nampo)
+\bukhandosi(125.85,39.25,평성,Pyeongseong)
+\bukhandosi<-45>(130.384444,42.344444,나선(라선),Raseon) % aka 라진- 선봉시 (~2001년)
+\bukhandosi<20>(125.759722,38.506389,사리원,Sariwon)
+\bukhandosi(124.4,40.1,신의주,Sineuiju)
+\bukhandosi(128.25,40.083333,신포,Sinpo)
+\bukhandosi*(127.446111,39.1475,원산,Wonsan) %  별을 사용하기는 도시 레이블의 바탕색을 덮기 / solid white bg demo
+
+%%% cities SK / 남한의 도시
+% formatting:
+\makeatletter
+\def\namhandosi{\@ifnextchar*{\@startrue\namhandosi@i}{\@starfalse\namhandosi@i*}}
+\def\namhandosi@i*{\@ifnextchar[{\namhandosi@ii}{\namhandosi@ii[DarkRed]}}
+\def\namhandosi@ii[#1]{\@ifnextchar<{\namhandosi@iii[#1]}{\namhandosi@iii[#1]<0>}}%
+\def\namhandosi@iii[#1]<#2>(#3,#4,#5,#6){%
+	\def\pst@tempA{#6}
+	\ifx\pst@tempA\empty\def\pst@tempB{#5}\else\def\pst@tempB{#6}\fi
+	\pnodeMap(#3,#4){\pst@tempB}
+	\if@star\uput*[#2](\pst@tempB){\color{#1}\sffamily\bfseries#5}
+	\else\uput[#2](\pst@tempB){\color{#1}\sffamily\bfseries#5}\fi
+	\psdot[linecolor=DarkRed](\pst@tempB)\ignorespaces}
+\makeatother
+
+% \namhandosi(126.983333,37.55,서울,Seoul) --> kextra
+\namhandosi<48>(128.716667,36.566667,안동,Andong)
+\namhandosi<-45>(129.033333,35.1,부산,Busan)
+\namhandosi(128.663056,35.270833,창원,Changweon)
+\namhandosi<10>(127.483333,36.633333,청주,Cheongju)
+\namhandosi(127.733333,37.866667,춘천,Chuncheon)
+\namhandosi<-10>(128.6,35.866667,대구,Daegu)
+\namhandosi<-90>(127.3849,36.3501,대전,Daejeon)
+\namhandosi(128.9,37.75,강릉,Gangneung)
+\namhandosi<110>(127.116667,36.45,공주,Gongju)
+\namhandosi(126.716667,35.983333,군산,Gunsan)
+\namhandosi(126.916667,35.166667,광주,Gwangju)
+\namhandosi<135>(126.633333,37.483333,인천,Incheon)
+\namhandosi<160>(126.517,33.48,제주,Jeju City)
+\namhandosi(127.15,35.816667,전주,Jeonju)
+\namhandosi(126.35,34.766667,목포,Mokpo)
+\namhandosi(129.365,36.032222,포항,Pohang)
+\namhandosi(129.165,37.45,삼척,Samcheok)
+\namhandosi<-45>(126.6,33.3,서귀포,Seogwipo) % 126.666667,33.366667
+\namhandosi(128.566667,38.2,속초,Sokcho)
+\namhandosi<-45>(127.016667,37.266667,수원,Suwon)
+\namhandosi(128.983333,37.166667,태백,Taebaek)
+\namhandosi(129.316667,35.55,울산,Ulsan)
+\namhandosi(127.783333,37.216667,원주,Wonju)
+\namhandosi<-45>(127.665278,34.762778,여수,Yeosu)
+
+
+%%% international cities / 국제 도시
+% formatting:
+\makeatletter
+\def\gukchedosi{\@ifnextchar*{\@startrue\gukchedosi@i}{\@starfalse\gukchedosi@i*}}
+\def\gukchedosi@i*{\@ifnextchar[{\gukchedosi@ii}{\gukchedosi@ii[black]}}
+\def\gukchedosi@ii[#1]{\@ifnextchar<{\gukchedosi@iii[#1]}{\gukchedosi@iii[#1]<0>}}%
+\def\gukchedosi@iii[#1]<#2>(#3,#4,#5,#6){%
+	\def\pst@tempA{#6}
+	\ifx\pst@tempA\empty\def\pst@tempB{#5}\else\def\pst@tempB{#6}\fi
+	\pnodeMap(#3,#4){\pst@tempB}
+	\if@star\uput*[#2](\pst@tempB){\color{#1}\sffamily\bfseries#5}
+	\else\uput[#2](\pst@tempB){\color{#1}\sffamily\bfseries#5}\fi
+	\psdot(\pst@tempB)\ignorespaces}
+\makeatother
+
+%%% cities Japan / 외국도시-- 일본
+\gukchedosi<-65>(130.4,33.583333,후쿠오카,Fukuoka)
+\gukchedosi(132.45,34.383333,히로시마,Hiroshima)
+
+%\gukchedosi(130.55,31.6,가고시마,Kagoshima)
+\gukchedosi<-60>(130.883333,33.883333,기타큐슈,Kitakyushu)
+\gukchedosi(130.733333,32.783333,구마모토,Kumamoto)
+\gukchedosi<90>(129.866667,32.783333,나가사키,Nagasaki)
+\gukchedosi<35>(130.933333,33.95,시모노세키,Shimonoseki)
+\gukchedosi<90>(131.466667,34.183333,야마구치,Yamaguchi)
+
+%%% cities China / 외국도시-- 중국
+\gukchedosi<-45>(122.99,41.108333,안산,Anshan)
+\gukchedosi[DarkSeaGreen]<-80>(128.316667,42.55,안투(안도),Antu)
+%\gukchedosi(125.316667,43.883333,창춘,Changchun)
+\gukchedosi<180>(124.383333,40.116667,단둥,Dandong)
+\gukchedosi[DarkSeaGreen]<90>(128.225,43.358333,둔화(돈화),Dunhua)
+\gukchedosi<65>(123.9,41.866667,푸순,Fushun)
+\gukchedosi(126.633333,45.75,하얼빈,Harbin)
+\gukchedosi[DarkSeaGreen]<70>(129.008499,42.54221,허룽,Helong)
+%\gukchedosi(126.566667,43.866667,지린,Jilin)
+\gukchedosi<-90>(125.140278,42.900556,랴오위안,Liaoyuan)
+\gukchedosi(129.599722,44.586111,무단장,Mudanjiang)
+\gukchedosi<180>(123.75,41.91,선양,Shenyang)
+%\gukchedosi(124.368611,43.163333,쓰핑,Siping)
+\gukchedosi<-90>(125.933333,41.716667,퉁화,Tonghua)
+\gukchedosi[DarkSeaGreen]<40>(129.843,42.966,투먼(도문),Tumen)
+\gukchedosi[DarkSeaGreen]<-160>(129.5,43.05,옌지(연길),Yanji)
+
+%%% cities Russia / 외국도시-- 러시아
+\gukchedosi<-120>(132.883333,42.816667,나홋카,Nakhodka)
+\gukchedosi<75>(131.9,43.133333,블라디보스토크,Vladivostok)
+
+
+%%% islands & islets / 섬
+% is text only
+\pnodeMap(125.77,33.3){Jejudo}\rput(Jejudo){\color{DarkRed}\textSEOM{제주도}} %(126.528056,33.365556)
+%\pnodeMap(127,33.5){Udo}\rput(Udo){\color{DarkBlue}\textbf{.}}
+\pnodeMap(127.11,33.57){U-do}\rput(U-do){\color{DarkRed}\textSEOM{\scriptsize 우도}}
+\pnodeMap(130.4,37.483333){Ulleungdo} % (130.9,37.483333)
+\pnodeMap(131.867778,37.240833){Dokdo}\rput(Dokdo){\color{DarkBlue}\textbf{.}} % Liancourt Rocks
+\pnodeMap(131.86,37.15){Dok-do}\rput(Dok-do){\color{DarkRed}\textSEOM{\scriptsize 독도}}
+\pnodeMap(125.33,34){Gageo-do}
+	\rput(Gageo-do){\color{DarkRed}\textSEOM{\shortstack{\tiny 가거도\\[-.2em]\tiny (소흑산도)}}}
+\pnodeMap(126.27,33.15){Gapado}\rput(Gapado){\color{DarkBlue}\textbf{.}}
+\pnodeMap(126.07,33.12){Gapa-do}\rput(Gapa-do){\color{DarkRed}\textSEOM{\tiny 가파도}}
+\pnodeMap(126.28,33.07){Marado}\rput(Marado){\color{DarkBlue}.}
+\pnodeMap(126.48,33.05){Mara-do}\rput(Mara-do){\color{DarkRed}\textSEOM{\tiny 마라도}}
+\pnodeMap(125.18,32.1){Ieodo}\rput(Ieodo){.} % Socotra Rock
+\pnodeMap(125.28,32.18){Ieo-do}\rput(Ieo-do){\color{DarkRed}\textSEOM{\tiny 이어도}}
+\pnodeMap(129.55,34.35){Tsushima}\rput{74}(Tsushima){\textSEOM{쓰시마(대마도)}} % (129.326944,34.416667)
+
+
+%%% nations/ 나라
+% is text only
+%
+%\pnodeMap(128.5,37){South Korea}
+%\rput(South Korea){\huge\textsf{\textcolor{LightPink}{한국}}}
+%\pnodeMap(127.5,40.5){North Korea}
+%\rput(North Korea){\huge\textsf{\textcolor{LightPink}{북조선}}}
+\pnodeMap(131,33.05){Japan}\rput(Japan){\huge\textsf{\textcolor{LightPink}{일본}}}
+\pnodeMap(124.65,42.4){China}\rput(China){\huge\textsf{\textcolor{LightPink}{중국}}}
+\pnodeMap(131.25,42.75){Russia}\rput{40}(Russia){\huge\textsf{\textcolor{LightPink}{러시아}}}
+
+
+%%% sea/ 바다
+% is text only
+\pnodeMap(131,39){Japanese Sea}\rput(Japanese Sea){\Huge\it\textcolor{SkyBlue}{동해}}
+\pnodeMap(123.8,37.8){Yellow Sea}\rput(Yellow Sea){\LARGE\it\textcolor{SkyBlue}{\shortstack{서해\\(황해)}}}
+\pnodeMap(128,33.3){East China Sea}\rput(East China Sea){\huge\it\textcolor{SkyBlue}{남해}}
+\pnodeMap(129.4,34.5){Korea Strait} % (129.796667,34.599444)
+	\rput{30}(Korea Strait){\Large\it\textcolor{SkyBlue}{대한\qquad\qquad 해협}}
+\pnodeMap(126.6,33.77){Jeju Strait}\rput(Jeju Strait){\large\it\textcolor{SkyBlue}{제주해협}}
+\pnodeMap(124.2,39){Korea Bay}\rput(Korea Bay){\it\textcolor{SkyBlue}{\shortstack{서한만/\\서조선만}}}
+\pnodeMap(128.8,39.5){East Korea Bay}\rput(East Korea Bay){\it\textcolor{SkyBlue}{\shortstack{동한만/\\동조선만}}}
+\pnodeMap(125.5,37.3){Gyeonggi Bay}\rput(Gyeonggi Bay){\it\textcolor{SkyBlue}{경기만}}
+
+
+%%% mountain peaks/ 산정
+% formatting:
+\makeatletter
+\def\hansan{\@ifnextchar*{\@startrue\hansan@i}{\@starfalse\hansan@i*}}
+\def\hansan@i*{\@ifnextchar[{\hansan@ii}{\hansan@ii[black]}}
+\def\hansan@ii[#1]{\@ifnextchar<{\hansan@iii[#1]}{\hansan@iii[#1]<0>}}%
+\def\hansan@iii[#1]<#2>(#3,#4,#5,#6,#7){%
+	\def\pst@tempA{#6}
+	\ifx\pst@tempA\empty\def\pst@tempB{#5}\else\def\pst@tempB{#6}\fi
+	\pnodeMap(#3,#4){\pst@tempB}
+	\if@star\uput*{3pt}[#2](\pst@tempB){\color{#1}\tiny\shortstack{#5\\[-.3em]#7}}
+	\else\uput*{3pt}[#2](\pst@tempB){\color{#1}\tiny\shortstack{#5\\[-.3em]#7}}\fi
+	\psdot*[linecolor=#1,dotstyle=triangle](\pst@tempB)\ignorespaces}
+\makeatother
+
+\hansan<90>(128.2,38,안산,Ansan,1430)
+\hansan[red]<180>(128.055278,42.005556,백두산,Baekdusan,2750)
+\hansan(128.05,40.78,백산,Baeksan,2379)
+\hansan<45>(128.8,40.75,복개산,Bokgaesan,1565)
+\hansan<90>(127.2,40.36,북산,Buksan,2070)
+\hansan<90>(127.9,40.84,차일봉,Chailbong,2506)
+\hansan(127.45,40.3,천불산,Cheonbulsan,1455)
+\hansan(129.65,41.05,칠보산,Chilbosan,906)
+\hansan<-145>(125.3,40.38,단풍덕산,Danpungdeoksan,1159)
+\hansan<90>(127.8,35.9,덕유산,Deogyusan,1614)
+\hansan(126.7,40.33,동백산,Dongbaeksan,2096)
+\hansan[red]<-30>(128.9,41.25,두류산,Duryusan,2309)
+\hansan<90>(127.8,41.15,두운봉,Duunbong,2487)
+\hansan(128.051667,38.526111,금강산,Geumgangsan,1638)
+\hansan<150>(129.2,41.7,관모봉,Gwanmobong,2541)
+\hansan<180>(129.07,41.58,궤상봉,Gwesangbong,2333)
+\hansan<90>(126.8,41.55,학송산,Haksongsan,1276)
+\hansan[red]<10>(126.533333,33.366667,한라산,Hallasan,1950)
+\hansan<90>(126.6,39.1,하랑산,Harangsan,1486)
+\hansan<90>(127.35,41.2,희색봉,Heuisaekbong,2185)
+\hansan(127.716667,35.333333,지리산,Jirisan,1915)
+\hansan<10>(125.6,40.45,주사산,Jusasan,1750)
+\hansan<90>(127,40.8,맹부산,Maengbusan,2214)
+\hansan[red]<165>(129.1,41.35,만탑산,Mantabsan,2205)
+\hansan<10>(126.333056,40.018611,묘향산,Myohyangsan,1909)
+\hansan[red]<90>(128.47,41.6,남포태산,Nampotaesan,2435)
+\hansan<60>(126.5,40.37,낭림산,Nangnimsan,2184) % aka 랑림산
+\hansan<90>(126.65,39.4,오봉산,Obongsan,1289)
+\hansan<-150>(128.7,37.6,오대산,Odaesan,1563)
+\hansan<90>(127,41.3,오가산,Ogabong,1598)
+\hansan(128,40.3,팔봉산,Palbongsan,1681)
+\hansan(125.5,40.08,삼각산,Samgaksan,937)
+\hansan[red](130.87,37.5,성인봉,Seonginbong,984)
+\hansan<90>(128.483333,37.75,설악산,Seoraksan,1708)
+\hansan<90>(128.47,36.97,소백산,Sobaeksan,1440)
+\hansan<90>(130.25,42.45,송진산,Songjinsan,1146)
+\hansan<90>(126.15,40.55,송적산,Songjeoksan,1970)
+\hansan(128.75,37.17,태백산,Taebaeksan,1567)
+\hansan<180>(128.25,37.4,태기산,Taegisan,1563)
+\hansan<-25>(129.13,41.64,투구봉,Tugubong,2335)
+\hansan<90>(128.1,36.9,월악산,Woraksan,1094)
+\hansan<90>(127.5,40.9,연화산,Yeonhwasan,2355)
+
+
+%%% rivers Korea/강--한국
+% is text only
+\pnodeMap(127.47,37.63){Bukhan River-1}\rput{-5}(Bukhan River-1){\textGANG{북}}
+\pnodeMap(127.63,37.7){Bukhan River-2}\rput{55}(Bukhan River-2){\textGANG{한}}
+\pnodeMap(127.75,37.78){Bukhan River-3}\rput{25}(Bukhan River-3){\textGANG{강}}
+\pnodeMap(125.85,39.59){Daedong River-1}\rput{55}(Daedong River-1){\textGANG{대}}
+\pnodeMap(126.08,39.65){Daedong River-2}\rput{7}(Daedong River-2){\textGANG{동강}}
+\pnodeMap(127.2,36.52){Geumho River-1}\rput{35}(Geumho River-1){\textGANG{금}}
+\pnodeMap(127.43,36.55){Geumho River-2}\rput{-40}(Geumho River-2){\textGANG{호}}
+\pnodeMap(127.55,36.51){Geumho River-3}\rput{-10}(Geumho River-3){\textGANG{강}}
+\pnodeMap(126.78,37.52){Han River}\rput{-35}(Han River){\textGANG{한강}}
+\pnodeMap(127.08,38.7){Imjin River}\rput{68}(Imjin River){\textGANG{임진강}}
+\pnodeMap(128.63,36.47){Nakdong River}\rput{13}(Nakdong River){\textGANG{낙동강}}
+\pnodeMap(127.5,37.3){Namhan River}\rput{-50}(Namhan River){\textGANG{남한강}}
+\pnodeMap(128.83,41.95){Tumen River-1}\rput{-5}(Tumen River-1){\textGANG{두}}
+\pnodeMap(129.08,42.02){Tumen River-2}\rput{45}(Tumen River-2){\textGANG{만강}}
+\pnodeMap(124.6,40.37){Yalu River-1}\rput{38}(Yalu River-1){\textGANG{압록강}} % 야루장
+\pnodeMap(127.57,41.535){Yalu River-2}\rput{-10}(Yalu River-2){\textGANG{압}}
+\pnodeMap(127.73,41.49){Yalu River-3}\rput(Yalu River-3){\textGANG{록}}
+\pnodeMap(127.89,41.515){Yalu River-4}\rput{15}(Yalu River-4){\textGANG{강}}
+
+
+%%% rivers China/강--중국
+% is text only
+\pnodeMap(123.57,42.32){Liao River-1}\rput{25}(Liao River-1){\textGANG{요하}}
+\pnodeMap(123.61,42.15){Liao River-2}\rput{25}(Liao River-2){\textGANG{(랴오허강)}}
+\pnodeMap(127.46,42.72){Sungari River-1}\rput{42}(Sungari River-1){\textGANG{송화}}
+\pnodeMap(127.63,42.86){Sungari River-2}\rput{60}(Sungari River-2){\textGANG{강}}
+\pnodeMap(127.89,42.85){Sungari River-3}\rput{-50}(Sungari River-3){\textGANG{(쑹}}
+\pnodeMap(128.01,42.72){Sungari River-4}\rput{-30}(Sungari River-4){\textGANG{화}}
+\pnodeMap(128.21,42.66){Sungari River-5}\rput{-10}(Sungari River-5){\textGANG{강)}}
+\pnodeMap(129.64,42.7){Tumen River-3}\rput{83}(Tumen River-3){\textGANG{(투먼장)}}
+\pnodeMap(125.35,40.775){Yalu River-5}\rput{32}(Yalu River-5){\textGANG{(야루장)}}
+
+%%% EOF

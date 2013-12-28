@@ -1,0 +1,31 @@
+\documentclass[12pt,a4paper]{article}	%% arirang-sheet.tex :: mito / nyamcoder
+%\usepackage{kotex} -- irrelevant
+%\begin{document}   -- irrelevant
+\begin[line-width=100,staffsize=16,fontload]{lilypond}
+ 		\relative c' {
+			%\key d \minor	% f \major 
+			\time 3/4
+			c4. d8 c[ d] f4. g8 f[ g] a4 g8[ a] f[ d] c4.( d8 c4) \break
+			f4. g8 f[ g] a[ g] f[ d] c[ d] f4. g8 f4 f2. \break
+			c'2 c4 c a g a g8 a\noBeam f[ d] c4.( d8 c4) \break
+			f4. g8 f[ g] a[ g] f[ d] c[ d] f4. g8 f4 f2.
+			}
+		\addlyrics { 
+			\override LyricText #'font-name = "은 필기a"
+						아 -- 리 -- 랑, _ 아 -- 리 -- 랑, _ 아 -- 라 -- _ 리 -- _ 요 __ 
+						아 -- 리 -- 랑 _ 고 -- _ 개 -- _ 로 _ 넘 -- 어 -- 간 -- 다. 
+						나 -- 를 버 -- 리 -- 고 가 -- 시 -- 는 님 -- _ 은 __
+						십 -- 리 -- 도 _ 못 _ 가 -- _ 서 _ 발 -- 병 -- 난 -- 다.			
+						}
+\end{lilypond}
+%\end{document}     -- irrelevant
+
+-------------------------------------------------------------------------
+
+* finding available fonts:
+$ lilypond -dshow-available-fonts blah # while an additional string like "blah" is mandatory!
+
+* compiling the staff
+$ lilypond-book --pdf arirang-sheet.tex
+
+... will produce some log messages and finally by default a "lily-xxx"-generated PDF (made of several .ly-snippets) for graphic import into the main document

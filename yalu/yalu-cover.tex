@@ -1,0 +1,73 @@
+\documentclass{article} %%% yalu-cover.tex :: mito / nyamcoder %%%
+\pagestyle{empty}
+\usepackage[svgnames]{xcolor}
+\usepackage{pst-plot,pst-text,pst-grad,pst-3dplot,pst-slpe}
+\usepackage{hangul,graphicx}
+%\usepackage{pifont} oder {bbding} funktionieren mit EUC-KR bzw. Λ nicht für Dingbat, ähnlich U+2740
+
+\begin{document}
+\makeatletter
+\디나루 % = \fontfamily{dn}\selectfont (Dinaru-Font)
+\color{orange}
+\fontseries{bux}\selectfont  % fett + ultrabreiter Schnitt
+
+\begin{pspicture}(0,0)(8,8)
+%%% Morgenstimmungs-Image
+\rput(-2,-12){\psframe[linewidth=0.01,fillstyle=slopes,slopecolors=0 .98 1 1 34 1 1 .9 50 1 .75 0 58 .5 1 .5 100 0 .5 .5 5,slopeangle=270,slopesteps=1000](0,0)(15.7,23)}
+
+%%% Sonnen-Image mit Schriftvergrößerungalgorithmus + Text
+\rput(9,7){\pscircle[linestyle=none,fillstyle=gradient,gradbegin=pink,gradend=yellow,gradmidpoint=0,gradangle=25](0,0){2.4}}
+% "A \DoPerCharacter macro adapted from Juergen Schlegelmilch (posted on comp.text.tex - January 1998)"
+%%% Code-Syntax an die aktualisierten pst-Pakete angepasst
+\def\DoPerCharacter#1#2#3\@nil{#1#2 \edef\@tempa{#3}%
+\ifx\@tempa\empty
+\else
+\DoPerCharacter#1#3\@nil
+\fi}
+
+\def\PerCharacter#1#2{\DoPerCharacter#1#2\@nil}
+\pst@dimh=0.7pt % Höhenaddition pro Schritt
+
+\def\CharacterAction#1{%
+\psscalebox{1 \pst@number{\pst@dimh}}{#1} % psscalebox=Laufweite
+\advance\pst@dimh by 0.15pt}
+
+\rput(9.2,6.5){\pstextpath{\psplot[linestyle=none,polarplot=true,plotpoints=300,unit=5]{500}{-500}{1 2.7182818 x 200 div exp 1 add div}}% Spirale; Linienoption: linecolor=blue
+{\PerCharacter{\CharacterAction}{{{\red{\quad  이 미 륵} }}Mirok{{ }}Li}} }
+
+%%% Gebirgs-Image
+\pspolygon[linestyle=none,fillstyle=slopes,slopecolors=0 1 1 1 5 1 1 .9 9 .75 .75 .75 50 .25 .25 .25 4,slope angle=270,slopesteps=500](-.5,-10)(2,1)(4.5,2)(5.5,1)(6.8,2.3)(8.5,1.2)(10,2)(11.4,1)(11.1,-10)
+%%% --> slopecolors/letzte Zahl: Anzahl der zu berücksichtigenden Farbstufen
+
+%%% Fluss-Image
+\pst@dimh=2pt
+\def\CharacterAction#1{%
+\psscalebox{1.05 \pst@number{\pst@dimh}}{#1}
+\advance\pst@dimh by 0.2pt}
+\renewcommand\blue{\color{DarkSlateBlue}}
+%%% orig.:
+%\pstextpath{\pscurve[linestyle=none](-1,0)(2.5,-.8)(1.2,-2.6)(10,-4.2)(11.5,-5)(12.5,-6)}{\blue\PerCharacter{\CharacterAction}{ {{압}}{{록}}{{강}}{{은}}{{ }}{{흐}}{{른}}{{다}}{{ -- }}DER{{ }}YALU{{ }}FLIESST}}
+% Linienoption: [linecolor=orange,linewidth=2pt]
+%%% neu für manuelle Korrektur:
+\pstextpath{\pscurve[linestyle=none](-1,-2)(2.5,-2.8)(1.2,-4.6)(10,-6.2)(11.5,-7)(12.5,-8)}{\blue\PerCharacter{\CharacterAction}{{{압}}{{록}}{{강}}{{은}}{{ }}{{ }}{{ }}{{ }}{{른}}{{다}}{{ -- }}DER{{ }}YALU{{ }}FLIESST}}
+%%% manuelle Korrektur:
+\rput(1.9,-3.95){\resizebox{.85cm}{1.3cm}{\rotatebox{12}{\blue 흐}}}
+
+%%% diverse Untertitel
+\rput(6.6,-3.4){\pstilt{95}{\psscalebox{.77 2}{\Large\color{Gold}  한국에서의 소년시대}}}
+\rput(6.55,-4.2){\pstilt{80}{\psscalebox{.8 2}{\Large\color{Orange} Eine Jugend in Korea}}}
+\rput(5.6,-7.8){\pstilt{80}{\psscalebox{.4 1}{\color{MediumAquamarine} 한국어· 독일어판 \quad
+\raisebox{-.35ex}{\large\color{CadetBlue} Koreanisch-Deutsche Ausgabe}}}}
+
+% Logo
+\rput(5.5,-9.3){\includegraphics[bb=148 642 175 668,width=4mm]{./mugunghwa.ps}\raisebox{8.2mm}{\,\textcolor{blue}{$\mu ugunghwa$}}}
+
+% Hilfsgitter
+%\psgrid[gridcolor=red,gridlabelcolor=blue,subgriddiv=10](-3,-13)(14,12)
+\end{pspicture}
+\end{document}
+
+
+* Kompilation
+
+$ lambda yalu-cover && dvips yalu-cover && ps2pdf yalu-cover.ps
