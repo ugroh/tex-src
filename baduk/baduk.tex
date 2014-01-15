@@ -1,4 +1,4 @@
-\documentclass{article}	%% baduk.tex :: mito / nyamcoder
+\documentclass{article}	%% baduk.tex :: mito / nyamcoder %%
 
 \usepackage{fontspec}
 \font\kg="HY백송B" at 14pt		% ttf; needs HWP installed -- or choose similar a font
@@ -6,7 +6,7 @@
 \font\kb="은 자모 바탕" at 10pt		% ttf; Un font collection, download from here: http://kldp.net/projects/unfonts/download
 						% after unzipping and copying to your font folder, in Linux don't forget to run ``fc-cache -fv''
 
-\usepackage{igo}
+\usepackage{igo}				% not included in TL -- needs extra installation
 \igofontsize{10}
 
 \begin{document}
@@ -39,38 +39,50 @@
 
 %%% igo: lgc690ff
 
-
+NOTE: The igo-package is not part of any LaTeX disribution. Download it from
+[1]  http://mirror.ctan.org/fonts/igo.zip
+or
+[2]  http://faq.ktug.org/faq/Karnes/2006-05?action=download&value=igo-type1-1.zip
 
 A: installing igo-stuff into the TeX-system (as a user)
 
 0. identify $TEXMFHOME
-$ kpsewhich -expand-var "\$TEXMFHOME"
-/home/honggildong/texmf
+$ kpsewhich -expand-var "\$TEXMFHOME" $HOME/texmf
+
 
 1. creation of necessary folders according to the TDS:
 
 $ mkdir -p ~/texmf/doc/latex/igo && mkdir -p ~/texmf/fonts/source/igo && mkdir -p ~/texmf/tex/latex/igo
 
-2. download http://mirror.ctan.org/fonts/igo.zip, unzip, and copy -->
+
+2. unzip and copy the contents of [1] or [2] to -->
 
 igo.sty --> ~/texmf/tex/latex/igo
 igo/fonts --> ~/texmf/fonts/source/igo
-rest -->  ~/texmf/doc/latex/igo
+other -->  ~/texmf/doc/latex/igo
+
 
 3. introducing all igo-stuff to the TeX-system (as a user):
+
 $ texhash (~/texmf)
+
+(check with: $ kpsewhich igo.sty)
+
+--> In case of using the download from [1], MetaFont will be activated to create vritual .pk-fonts at the initial source file compilation (B); this might take a while.
+
+
+4. In case of downloading from [2] (recommended), the pre-compiled .pfb-PostScript fonts (Type1) will be used instead. However, this is needed to be done before:
+$ updmap --enable Map=(/path/to/)igo.map
 
 
 
 B: compiling the main document:
+
 $ xelatex baduk(.tex)
 
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-note I: metafont will be activated at the first run
+*** find other badul/igo-examples here: http://faq.ktug.org/faq/IgoPackage#s-3
 
-note II: this xelatex-example uses ttf, for latex, pre-built type1-fonts can be fetched from here:  http://faq.ktug.org/faq/Karnes/2006-05?action=download&value=igo-type1-1.zip
-
-note III: see other badul/igo-examples here: http://faq.ktug.org/faq/IgoPackage#s-3
