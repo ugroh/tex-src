@@ -1,0 +1,96 @@
+%%% korLL-title.tex :: mito / nyamcoder %%%
+\documentclass{article}
+\usepackage{kotex}
+\usepackage{graphicx} 
+\newsavebox\IBox
+	\sbox\IBox{\includegraphics[scale=.1835]{pic/Korean-cuisine-Banchan-02_32ooX24oo-oil-rand32-spiegel2.eps}}
+\usepackage[svgnames]{xcolor}
+\usepackage{pstricks,pst-grad,pst-text,pst-blur}
+\usepackage{chancery}	% emulating Zapf Chancery font 
+\usepackage{soul}		% letter spacing (\sodef)
+\pagestyle{empty}
+\begin{document}
+\vspace*{-1cm}
+\begin{centering}
+%\textsf{\LARGE Michael\enskip Topp}\\[5mm]
+\end{centering}
+%\psset{linewidth=0.5pt,blur=true,blurradius=0.1cm,shadow=true,linecolor=black!60,shadowcolor=red!20,shadowsize=0.3cm,fillstyle=gradient,gradbegin=darkgray,gradend=white,cmyk}
+% \rput(10,1.5){\pscharpath{\fontsize{60}{60}\selectfont 문자와\enskip 표기}}	 
+\SetHangulFonts{utbm}{utgt}{uttz} % ok: utpga,utbm,utdn,utjsr 
+	% black teal brown olive  
+\hspace*{-2cm}%\vspace*{-5cm}
+\begin{pspicture}[shift=-2cm](15,20)
+\rput[lb](-.3,-.3){\usebox\IBox}
+%\psset{linewidth=0.5pt,blur=true,blurradius=0.1cm,shadow=true,linecolor=black!60,shadowcolor=black!20,shadowsize=0.3cm}
+\psframe[linecolor=SeaGreen](15,20.15) % linecolor=AliceBlue  blurbg=MintCream linewidth=.5pt,linecolor=HotPink 
+\rput(7.5,18.7){\textsf{\LARGE \textcolor{LightYellow}{Michael\enskip Topp}}}
+\psset{linestyle=none,linewidth=.01,linecolor=HotPink,
+%blur=true,blurradius=0.07cm,blurbg=Honeydew,
+%shadow=false,shadowcolor=SeaGreen,shadowsize=0.3cm,shadowangle=-70,
+fillstyle=gradient,gradbegin=DeepSkyBlue,gradend=LightCyan,gradangle=-40,cmyk}
+	\rput(7.5,13.5){\pscharpath{\fontsize{60}{60}\selectfont\shortstack{Koreanisch-\qquad\quad\\\qquad\quad Rezepte\\[-.15em]\fontsize{30}{30}\selectfont für}}}
+
+\psset{linestyle=none,linewidth=.01,%linecolor=black!60,
+blur=true,blurradius=0.25cm,blurbg=LightYellow,%
+shadow=true,shadowcolor=SeaGreen,shadowsize=0.2cm,shadowangle=-70,%
+fillstyle=gradient,gradangle=90,gradbegin=cyan,gradend=red,cmyk}
+	\rput(7.5,10.3){\pscharpath{\fontsize{60}{60}\selectfont Linux \&\,\LaTeX}}
+
+\psset{linestyle=none,linewidth=.01,%
+blur=true,blurradius=0.15cm,%
+shadow=true,shadowsize=0.15cm,%
+fillstyle=gradient,gradbegin=cyan,gradend=red,gradmidpoint=1,cmyk}% ,gradmidpoint=.65 
+	\rput(7.5,7){\pscharpath{\rmfamily\fontsize{30}{30}\selectfont\itshape{\qquad리눅스{\fontsize{20}{20}\selectfont와}\enskip라텍\qquad\qquad}}}
+%	\pscustom[gradbegin=Teal,gradend=LightBlue]
+
+\psset{linewidth=0.5pt,
+blur=false,%blurradius=0.1cm,
+shadow=false,%linecolor=black!60,shadowcolor=red!20,shadowsize=0.2cm,  gradmidpoint=1.5, 
+fillstyle=gradient,gradbegin=LightCyan,gradend=DeepSkyBlue,gradangle=-40,cmyk}
+	\rput(7.5,6.17){\pscharpath{\shortstack{\fontsize{20}{20}\selectfont\qquad\qquad\qquad\itshape{\qquad\qquad을\enskip위한}\\[4mm]\fontsize{30}{30}\selectfont\itshape{한국식\enskip조리법}}}}
+
+\sodef\cs{}{-.05em}{.35em}{.7em}
+\psset{linewidth=0.01pt,linecolor=LightYellow,
+blur=false,%blurradius=0.1cm,
+fillstyle=solid,fillcolor=SeaGreen!80,
+shadow=false%,shadowcolor=SeaGreen,shadowsize=0.3cm
+}
+	\rput(7.5,3.5){\pscharpath{\sffamily\fontsize{30}{30}\selectfont\cs{Korean Cookbook}}}
+	\rput(7.5,2.5){\pscharpath{\sffamily\fontsize{30}{30}\selectfont\cs{for Linux \& \LaTeX}}}
+%\psgrid[gridcolor=orange](16,26)
+
+\end{pspicture}
+\pagebreak\\
+\pagebreak %%%%%%  schmutztitel / mock title %%%%%%
+%\vspace*{-2cm}
+\hspace*{-1.5cm}
+\raisebox{-2cm}[20cm]{
+\begin{pspicture}[shift=3cm](15,20)
+\psframe(15,20.15)
+\rput(7.5,18.7){\textsf{\LARGE Michael\enskip Topp}}
+\rput(7.5,13.5){\pscharpath{\fontsize{60}{60}\selectfont\shortstack{Koreanisch-\qquad\quad\\\qquad\quad Rezepte\\[-.15em]\fontsize{30}{30}\selectfont für}}}
+\rput(7.5,10.3){\pscharpath{\fontsize{60}{60}\selectfont Linux \&\,\LaTeX}}
+\rput(7.5,7){\pscharpath{\rmfamily\fontsize{30}{30}\selectfont\itshape{\qquad리눅스{\fontsize{20}{20}\selectfont와}\enskip라텍\qquad\qquad}}}
+\rput(7.5,6.17){\pscharpath{\shortstack{\fontsize{20}{20}\selectfont\qquad\qquad\qquad\itshape{\qquad\quad\enskip\,을\enskip위한}\\[4mm]\fontsize{30}{30}\selectfont\itshape{한국식\enskip조리법}}}}
+\sodef\cs{}{-.05em}{.35em}{.7em}
+\rput(7.5,3.5){\pscharpath{\sffamily\fontsize{30}{30}\selectfont\cs{Korean Cookbook}}}
+\rput(7.5,2.5){\pscharpath{\sffamily\fontsize{30}{30}\selectfont\cs{for Linux \& \LaTeX}}}
+\rput(7.5,-1){\sffamily\fontsize{16}{16}Version 0.1.2}
+\end{pspicture}}
+%\pagebreak
+
+\end{document}
+
+
+* compilation
+
+$ latex korLL-title.tex
+$ dvips -o korLL-title.ps korLL-title.dvi
+$ ps2pdf korLL-title.ps
+
++++ note: in ko.TeX 2013, utbm (Un Bom) seems not to work as usual and is replaced by a dummy Myeongjo font; 
+
+
+* image resource: https://en.wikipedia.org/wiki/File:Korean.cuisine-Banchan-02.jpg
+
+
