@@ -1,0 +1,72 @@
+\documentclass{article}		%%% frametest.tex :: mito / nyamcoder %%%
+\usepackage{fontspec}
+\font\ckk="Code2000" at 16pt
+\font\hb="한컴바탕" at 16pt
+\font\hB="한컴바탕" at 12pt
+\font\gs="궁서" at 16pt
+\font\uni="uni font-PRO" at 16pt
+\font\shruti="Shruti" at 16pt
+\font\cmr="cmr10" at 16pt
+\font\cmR="cmr10" at 12pt
+\font\cmmi="cmmi10" at 16pt
+\font\unicorn="Unicorn" at 16pt
+\font\texef="TeXplus EF" at 16pt
+\font\texmi="TeXplus MI" at 16pt
+\font\yudit="Yudit" at 16pt
+\font\wing="Wingdings" at 16pt
+\font\luc="Lucida Console" at 12pt
+\usepackage{xcolor}
+\renewcommand\baselinestretch{.2}
+\pagestyle{empty}
+\begin{document}
+\vspace*{-2cm}
+%                                      이것은 국제글꼴 표시에 따를 텍스트입니다
+\noindent\hspace*{-2.3mm}
+\setlength\fboxsep{1pt}
+\fcolorbox{red}{white}{%
+\begin{minipage}{8.6cm}
+\fcolorbox{blue}{white}{%
+\begin{minipage}{8.5cm}%
+\setlength\fboxsep{0pt}
+\huge%
+\fcolorbox{red}{yellow}{E}\fcolorbox{red}{yellow}{i}\fcolorbox{red}{yellow}{n}\fcolorbox{red}{yellow}{f}\fcolorbox{red}{yellow}{a}\fcolorbox{red}{yellow}{c}\fcolorbox{red}{yellow}{h}\fcolorbox{red}{yellow}{e}\hfill\fcolorbox{red}{yellow}{B}\fcolorbox{red}{yellow}{u}\fcolorbox{red}{yellow}{c}\fcolorbox{red}{yellow}{h}\fcolorbox{red}{yellow}{s}\fcolorbox{red}{yellow}{t}\fcolorbox{red}{yellow}{a}\fcolorbox{red}{yellow}{b}\fcolorbox{red}{yellow}{e}\fcolorbox{red}{yellow}{n}\fcolorbox{red}{yellow}{b}\fcolorbox{red}{yellow}{o}\fcolorbox{red}{yellow}{x}\fcolorbox{red}{yellow}{e}\fcolorbox{red}{yellow}{n}\\%
+\fcolorbox{red}{yellow}{fügen}\hfill\fcolorbox{red}{yellow}{sich}\hfill\fcolorbox{red}{yellow}{zu}\hfill\fcolorbox{red}{yellow}{Wortboxen}\fcolorbox{red}{yellow}{,}\\%
+\fcolorbox{red}{yellow}{woraus\hspace{1.287em}Zeilenboxen\hspace{1.287em}und}\\%
+dann Absatzboxen werden.\end{minipage}}
+\\[.5em]
+\fcolorbox{blue}{white}{%
+\begin{minipage}{8.5cm}
+\setlength\fboxsep{0pt}
+%\fcolorbox{red}{yellow}{\huge\LaTeX}
+\hb\fcolorbox{red}{yellow}{먼}\fcolorbox{red}{yellow}{저}\hfill\fcolorbox{red}{yellow}{단}\fcolorbox{red}{yellow}{순}\fcolorbox{red}{yellow}{한}\hfill\fcolorbox{red}{yellow}{글}\fcolorbox{red}{yellow}{자}\fcolorbox{red}{yellow}{박}\fcolorbox{red}{yellow}{스}\fcolorbox{red}{yellow}{는}\\
+\fcolorbox{red}{yellow}{단어박스에}\hfill\fcolorbox{red}{yellow}{연결됩니다.}\\\fcolorbox{red}{yellow}{그것은\hspace{2.533em}차례로\hspace{2.533em}줄박스와}\\
+절박스가\quad 됩니다.\end{minipage}}
+\end{minipage}}
+\\[.5em]\setlength\fboxsep{0pt}
+\noindent\begin{minipage}{8.7cm}
+\cmr\fcolorbox{red}{yellow}{abcdeABCDE}{\color{green}\hrulefill\hrulefill\hrulefill\hrulefill}%
+\fcolorbox{red}{yellow}{\cmmi 12345}{\color{green}\hrulefill\hrulefill\hrulefill\hrulefill}%
+\fcolorbox{red}{yellow}{\ckk\huge$\tilde{}$}%\~{} 
+{\color{green}\hrulefill}\fcolorbox{red}{yellow}{\ckk\huge\c{}}{\color{green}\hrulefill}%
+\fcolorbox{red}{yellow}{\ckk ·}%
+\fcolorbox{red}{yellow}{\ckk É}%
+\fcolorbox{red}{yellow}{\unicorn Q}%
+\fcolorbox{red}{yellow}{\shruti ૐ}%  \fcolorbox{red}{yellow}{ᇸ} 
+\fcolorbox{red}{yellow}{\hb ☺}\\
+\makebox[0cm][l]{\enskip\,\fcolorbox{red}{yellow}{\gs 가나다} \ckk\fcolorbox{red}{yellow}{ㄱ}\fcolorbox{red}{yellow}{ㄴ}\fcolorbox{red}{yellow}{ㄷ}\fcolorbox{red}{yellow}{ᄢ} \fcolorbox{red}{yellow}{ㅏ}\fcolorbox{red}{yellow}{ㅗ}\,\quad\fcolorbox{red}{yellow}{ᅵᇸ}\hspace{.8em}\uni\fcolorbox{red}{yellow}{韓國}}{\color{green}\rule{\linewidth}{.5pt}}\\[1em]
+\large Unicode-Block\hfill Hangul\hfill Compatibility\hfill Jamo\\[.2em]
+(\luc U+3131\,\large bis \luc U+318F\large):\hfill{\vspace{-1em}\ckk\fcolorbox{red}{yellow}{ㄱ}\quad\fcolorbox{red}{yellow}{ㄴ}\quad\fcolorbox{red}{yellow}{ㄷ}}\\[1.6em]
+\large Unicode-Block\hfill Hangul\hfill Jamo\hfill({\luc U+1100\hfill\large bis \luc U+11FF}):\\
+{\large $choseong$:}\hfill\ckk\fcolorbox{red}{yellow}{ᄀ}\quad\fcolorbox{red}{yellow}{ᄂ}\quad\fcolorbox{red}{yellow}{ᄃ}\\
+{\large $jungseong$:}\hfill\ckk\fcolorbox{red}{yellow}{ᅡ}\qquad\fcolorbox{red}{yellow}{ᅩ}\qquad\fcolorbox{red}{yellow}{ᆋ}\\[.3em]
+{\large $jongseong$:}\hfill\ckk\fcolorbox{red}{yellow}{ᆨ}\qquad\fcolorbox{red}{yellow}{ᆫ}\qquad\fcolorbox{red}{yellow}{ᆮ}\\
+\large kombiniert:\hfill\ckk\fcolorbox{red}{yellow}{ᄒ}$\enskip+\quad$\fcolorbox{red}{yellow}{ᆞ}$\enskip+\quad$\fcolorbox{red}{yellow}{ᆫ}$\quad\Rightarrow\quad$\fcolorbox{red}{yellow}{ᄒᆞᆫ}\\[.7em]
+\large Unicode-Block Private \vspace{.2em}{Use Area (\luc U+E000\enskip\large bis \luc U+F8FF\large):\\[-.1em]
+$precomposed$/{\hB 완성},\,\luc Hanyang\,PUA\,U+F53A\large:\enskip\fcolorbox{red}{yellow}{\hb }}\\[1.5em]
+\hb 이것은\enskip\makebox[0cm][l]{삭제된}{\color{red}\textbf{\Large XXXX}} 텍스트입니다!
+\end{minipage}
+\end{document}
+
+* kompilation
+
+$ xelatex frametest
