@@ -1,0 +1,25 @@
+\documentclass{book}		%%% kkd-chapter-ko.tex :: mito / nyamcoder %%%
+%\usepackage{hangul}	% switches to hangul localization by default; compilation w/ lambda
+\usepackage[hangul]{kotex}
+%\usepackage[Lenny]{fncychap}  % doesn't work bec. of the split up counter; see result when entering ''r'' at the prompt
+\begin{document}
+
+%\centering
+\flushright
+\setcounter{chapter}{2}
+\chapter{한국의 영화 예술}
+\vspace{2cm}
+
+팽팽함에는 강인함과 아름다운 소리가 있다.\\
+죽을때 까지 활처럼 살고 싶다.\\
+\emph{김기덕 -- 활 (2005년)}\\[1cm]
+In der Spannung des Bogens liegen Stärke und Wohlklang.\\
+So möchte ich leben bis zu meinem Tod.\\
+\emph{Kim Ki-duk -- Der Bogen (2005)}
+
+\end{document}
+
+
+* compilation
+
+$ pdflatex kkd-chapter-ko
