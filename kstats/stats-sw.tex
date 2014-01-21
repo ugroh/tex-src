@@ -1,0 +1,84 @@
+%%% stats-sw.tex :: mito / nyamcoder %%%
+\documentclass[a4paper,11pt]{article}
+\usepackage{hangul}	
+%\usepackage{multirow}	% Alternative für mehrzeilige Zellen 
+%\usepackage{colortbl}	% für farbige Tabellenhintergründe
+%\newlength\savedwidth	% nach lb2-274 "Linien variabler Stärke" 
+%\newcommand\whline{\noalign{\global\savedwidth\arrayrulewidth
+%					\global\arrayrulewidth 1pt}%
+%				\hline
+%				\noalign{\global\arrayrulewidth\savedwidth}}
+
+%\definecolor{담청색}{cmyk}{.05,0,0,0}	% Abkürzung für \rowcolor[cmyk]{.05,0,0,0}
+%\definecolor{암청색}{cmyk}{.2,0,0,0}	% Abkürzung für \rowcolor[cmyk]{.2,0,0,0}
+
+%\usepackage{color}
+%\usepackage{array}
+
+
+\pagestyle{empty}
+
+\begin{document}
+\자모고딕
+\centering{\large 표1. 한국 접촉 경험 및 경로}
+\고딕
+
+%\arrayrulecolor{blue}
+\begin{tabular}{r|c|c|c|c}		
+
+\multicolumn{5}{r}{\footnotesize 단위: \%}\\\cline{1-5}
+%\rowcolor{암청색}
+ 	&						& \multicolumn{3}{c}{국가별}\\
+\cline{3-5}		%\arrayrulecolor{암청색}{2-2}
+%\rowcolor{암청색}
+	& \raisebox{1.75ex}[0cm][0cm]{전체} 	& 미국 	& 독일	& 일본	\\\hline
+%\rowcolor{담청색}
+\multicolumn{1}{l|}{한국관련 뉴스접촉 정도}	& & & & \\\hline
+자주 접하고 있다 	& 35	& 39	& 15	& 51	\\\hline 
+접하고 있지 않다	& 64 	& 60	& 83	& 49	\\\hline 
+%\rowcolor{담청색}
+\multicolumn{1}{l|}{한국관련 직접경험}	& & & & \\\hline
+한국 방문경험 비율	& 9	& 4	& 2	& 21	\\\hline
+한국제품 구입경험자 비율 & 46 & 57 & 34	& 48	\\\hline
+한국관련행사 참여경험 비율 & 11 & 12 & 10 & 11	\\\hline
+알고 지내는 한국사람 있는 비율 & 31 & 42 & 20 & 30	\\\hline
+\multicolumn{5}{r}{\명조\footnotesize 주: 모름/무응답 비율 제외}\\
+\end{tabular}
+
+\end{document}
+
+
+
+* latex-graphics companion p746ff, lb2 p274 (linien variabler stärke)
+* dasselbe wie stats.tex, aber die farbrelevanten elemente auskommentiert
+
+
+* kompilation:
+
+$ lambda stats-sw.tex && dvipdfmx stats.dvi
+
+
+* quelle:
+
+http://www.hankookresearch.co.kr/renewal/lesson/data/winter2005.pdf -- p9
+bzw.
+http://74.125.77.132/search?q=cache:HYYVrSRI9u0J:www.hankookresearch.co.kr/renewal/lesson/data/winter2005.pdf+%EB%85%B8%EC%9D%B8+1%EB%AA%85%EA%B0%80%EA%B5%AC+korean+statistics&cd=15&hl=de&ct=clnk
+
+
+주: 모름/무응답 비율 제외
+
+단위 : %
+주: 모름/무응답 비율 제외
+전체
+국가별
+미국 독일 일본
+한국관련 뉴스접촉 정도
+자주 접하고 있다 35 39 15 51
+접하고 있지 않다 64 60 83 49
+한국관련 직접경험
+한국 방문경험 비율 9 4 2 21
+한국제품 구입경험자 비율 46 57 34 48
+한국관련행사 참여경험 비율 11 12 10 11
+알고 지내는 한국사람 있는 비율 31 42 20 30
+
+
