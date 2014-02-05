@@ -1,0 +1,8 @@
+## latex/pdflatex auxiliary & intermediate document files:
+
+*.aux
+*.div
+*.log
+*.ps
+*.synctex.gz
+

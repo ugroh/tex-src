@@ -6,8 +6,10 @@
 \begin{document}
 \begin{CJK}{UTF8}{mj}
 \noindent
-\begin{centering}
-\begin{em} 우리말 단어의 간단한 분할 표기:\end{em}\\[1em]
+%\begin{centering}
+\center
+\bf 우리말 단어의 간단한 분할 표기\\[3em]
+\sf\fbox{환영합니다.}\\[2em]
 
 %%%%%%%%%%%% (ㄱ) %%%%%%%%%%%%
 \newtier{sd} %  별도 sound: C/V
@@ -15,7 +17,7 @@
 \tiershortcuts %     "
 
 \asr[reptype=nots,sd=(ph) -.5em (sound)]
-|\qsyl({환})4|{ㅎ}{ㅗ}{ㅏ\ }{ㄴ}|\qsyl({영})3|{이}{ㅓ}{ㅇ}|\qsyl({합})3|{ㅎ}{ ㅏ }{ㅂ}|\qsyl({니})2|{ㄴ}{ㅣ\ \,}|\qsyl({다})2|{ㄷ}{ㅏ\ \ }
+|\qsyl({환})4|{ㅎ}{ㅗ}{ㅏ \,}{ㄴ}|\qsyl({영})3|{이}{ㅓ \,}{ㅇ}|\qsyl({합})3|{ㅎ}{ㅏ \,}{ㅂ}|\qsyl({니})2|{ㄴ}{ㅣ\ \,}|\qsyl({다})2|{ㄷ}{ㅏ\ \ }
 |\@[\sdoff](0,sd){C}\-(0,ts)
 \@[\sdoff](1,sd){V}\-(1,ts)
 \@[\sdoff](2,sd){V}\-(2,ts)
@@ -37,7 +39,7 @@ V $=$ 모음$(vowel)$\qquad C $=$ 자음$(consonant)$\\[2em]
 
 \normalsize
 %%%%%%%%%%%% (ㄴ) %%%%%%%%%%%%
-\asr[tssym=\small{$\bullet$}]\3{ㅎ}{ㅘ}{ㄴ}\2{여}{ㅇ}\3{ㅎ}{ ㅏ }{ㅂ}\2{ㄴ}{ㅣ\ \,}\3{ㄷ}{ㅏ\ \,}:
+\asr[tssym=\small{$\bullet$}]\3{ㅎ}{ㅘ}{ㄴ}\2{여}{ㅇ}\3{ㅎ}{ㅏ\enskip}{ㅂ}\2{ㄴ}{ㅣ\ \,}\3{ㄷ}{ㅏ\ \,}:
 \endasr\\[1em] % no break at last line!!
 \small
 $\sigma=$ 음절$(syllable)$\\[2em]
@@ -51,7 +53,7 @@ $\sigma=$ 음절$(syllable)$\\[2em]
 \asr[style=bigsyls,nuc=(sy) 1em ($\nu$),diph=(ph) -2em (monoph)]
 |\varsyl{\syloffA}{0,1,2}|{\ /\,ㅎ}{ㅘ}{ㄴ}
 |\varsyl{\syloffB}{0,1}|{여}{ㅇ}
-|\varsyl{\syloffA}{0,1,2}|{ㅎ}{ ㅏ }{\raisebox{-1em}{\shortstack{ㅂ\\{[ㅁ]}}}} % securing {[ㅁ]}; extra `` '' for `` ㅏ ''
+|\varsyl{\syloffA}{0,1,2}|{ㅎ}{ㅏ \,}{\raisebox{-1em}{\shortstack{ㅂ\\{[ㅁ]}}}} % securing {[ㅁ]}; extra `` '' for `` ㅏ ''
 |\varsyl{\syloffA}{0,1}|{ㄴ}{ㅣ\ \,}
 |\varsyl{\syloffA}{0,1}|{ㄷ}{\,ㅏ\,/}
 |\@[\nucoff](1,nuc){$\nu$}\-(1,ts)
@@ -66,8 +68,9 @@ $\sigma=$ 음절$(syllable)$\\[2em]
 \endasr\\[.7em]
 
 \small
+\hspace{3.2cm}  % for whatever reason, this manual adjusting was necessary lately; try without first
 $\sigma=$ 음절$(syllable)\qquad\nu=$ 핵$(nucleus)$
-\end{centering}
+%\begin{centering}
 \end{CJK}
 \end{document}
 
@@ -79,12 +82,11 @@ $\sigma=$ 음절$(syllable)\qquad\nu=$ 핵$(nucleus)$
 $ latex ksegment && dvips ksegment && ps2pdf ksegment.ps
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
 * documentation
 
-/usr/share/texlive/2008/texmf-dist/doc/generic/pst-asr/pst-asr-doc.pdf	% nach (24),(25) auf p12f u 22ff 35f; p42! 
+/usr/share/texlive/2008/texmf-dist/doc/generic/pst-asr/pst-asr-doc.pdf	% acc. to (24),(25) on p12f + 22ff 35f; p42! 
 /usr/share/texlive/2008/texmf-dist/doc/generic/pst-asr/pst-asr-examples.pdf 
 /usr/share/texlive/2008/texmf-dist/tex/generic/pst-asr/pst-asr.tex
 
@@ -93,4 +95,3 @@ $ latex ksegment && dvips ksegment && ps2pdf ksegment.ps
 /usr/share/texlive/2008/texmf-dist/doc/generic/pst-jtree/pst-jtree-doc.pdf
 /usr/share/texlive/2008/texmf-dist/doc/generic/pst-jtree/pst-jtree-examples.pdf
 /usr/share/texlive/2008/texmf-dist/doc/generic/pst-jtree/pst-jtree-examples.tex
-
