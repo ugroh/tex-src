@@ -1,7 +1,7 @@
 ## latex/pdflatex auxiliary & intermediate document files:
 
 *.aux
-*.div
+*.dvi
 *.log
 *.ps
 *.synctex.gz
