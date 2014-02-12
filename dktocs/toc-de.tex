@@ -1,0 +1,61 @@
+%%% toc-de.tex :: mito / nyamcoder %%%
+\documentclass[a4paper,11pt]{scrartcl}% ,ngerman
+\usepackage{boxedminipage}% mit dem paket keine kor.sg 
+\usepackage[ngerman]{babel}
+\usepackage{kotex} % bleibt dann kor, auch mit ngerman/babel		[hanja]
+\usepackage{times}
+\setlength\textheight{27.5cm}
+\setlength\voffset{-2cm}
+\setlength\textwidth{16cm}
+
+\begin{document}	% toc: 48ff 
+\begin{boxedminipage}[t]{\linewidth}
+\tableofcontents
+\dotfill
+\section*{Vorwort}
+\addcontentsline{toc}{section}{\protect\numberline{}Vorwort}
+Koreas umfangreiches Kulturvermächtnis enthält viele als Nationalschätze klassifizierte Güter\,\cite{k1}, die darüber hinaus als Welterbe in die UNESCO-Liste aufgenommen wurden.\cite{k2} 
+\section{Die Nationalschätze Südkoreas (\textit{kukpo})}
+\subsection{Orte und Gebäude}
+\subsubsection{Namdaemun (1395/1447), Nr. 1}
+\subsubsection{Der Pulguksa-Tempelkomplex (774), UNESCO-Weltkulturerbe}
+\paragraph{Tabot'ap-Pagode (751), Nr. 20} 		% nicht mehr gezählt, im toc nicht angezeigt 
+\paragraph{S\u{o}kkat'ap-Pagode (751), Nr. 21} 	% nicht mehr gezählt, im toc nicht angezeigt 
+\subsubsection{S\u{o}kkuram-Grotte (751--774), Nr. 24, UNESCO-Weltkultur- und Naturerbe}
+\subsection{Objekte der Bildenden Kunst und des Kunsthandwerks}
+\subsubsection{Vergoldete Bronzefigur des Mir\u{u}k (7. Jh.), Nr. 83}
+\subsection{Gemälde, Schriftstücke und Druckmedien}
+\subsubsection{Tripitaka Koreana (1236--1251), Nr. 32, UNESCO-Weltdokumentenerbe}
+\subsubsection{Hunminj\u{o}ng\u{u}m (1443), Nr. 70, UNESCO-Weltdokumentenerbe}
+%\subsubsection{Cheonmado (5./6. Jh.), Nr. 207}
+%\section{Die Schätze Koreas (\textit{pomul})}
+%\subsubsection{} ...
+%\subsubsection{}
+%\section{Die Nationalschätze Nordkoreas (\textit{kukpo})}
+%\subsubsection{} ...
+\section{Überregionales Kulturerbe}
+\subsection{Der Kogury\u{o}-Gräberkomplex, UNESCO-Weltkulturerbe \textnormal{\cite{k3}}}
+
+\renewcommand\refname{Weblinks}
+\begin{thebibliography}{9}
+\addcontentsline{toc}{section}{\refname}
+\bibitem{k1} \verb#http://www.heritage.go.kr#, \enskip\verb#http://www.cha.go.kr#
+\bibitem{k2} \verb#http://german.visitkorea.or.kr/ger/CU/CU_GE_5_10_0.jsp#
+\bibitem{k3} \verb#http://whc.unesco.org/en/list/1091#
+%\bibitem{k4} \verb#http://www.eu-asien.de/Korea-Informationen/Touristeninformationen/UNESCO-2009-Korea.html# % <-- allg. 
+\end{thebibliography}
+
+\end{boxedminipage}
+\end{document}
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+* kompilation
+
+$ pdflatex toc-de.tex && pdflatex toc-de.tex
+
+
+--> erzeugt beim ersten durchlauf toc-de.toc, die beim zweiten verwendet wird
+

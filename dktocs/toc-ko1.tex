@@ -1,0 +1,71 @@
+%%% toc-ko1.tex :: mito / nyamcoder %%%
+\documentclass[a4paper,11pt]{book}
+\usepackage{boxedminipage}
+\usepackage[hangul]{kotex}
+\usepackage{times}
+\begin{document}
+%\begin{boxedminipage}[t]{\linewidth}
+
+
+\chapter*{머리말}
+\addcontentsline{toc}{chapter}{머리말} % \protect\numberline{} 
+한국은 광대한 문화 유산중에서 국보와 보물에 따라 분류된 작품이 많은데\,\cite{k1} 그 중에서 유네스코 세계유산에 문화재로 지정돤 것도 있다.\cite{k2}
+
+\chapter{남한의 국보}
+\section{장소}
+\subsection{숭례문 (1395/1447년), 1호}
+\subsection{불국사 (774년), 유네스코 세계문화유산}
+\subsubsection{다보탑 (751년), 20호} 	% nicht mehr gezählt, im toc nicht angezeigt 
+\subsubsection{석가답 (751년), 21호} 	% nicht mehr gezählt, im toc nicht angezeigt 
+\subsection{석굴암 (751$\sim$774년), 24호, 유네스코 세계문화\,·\,자연유산}
+\section{시각 예술품\,·\,공예품}
+\subsection{금동미륵보살반가상 (7세기), 83호}
+\section{미술품\,·\,문서\,·\,인쇄물}
+\subsection{해인사 대장경판 (1236$\sim$1251년), 32호, 유네스코 세계기록유산}
+\section{훈민정음 (1443년), 70호, 유네스코 세계기록유산}
+\subsection{천마도 (5$\sim$6세기), 207호}
+%\subsubsection{Cheonmado (5./6. Jh.), Nr. 207}
+%\section{Die Schätze Koreas (\slshape{pomul})}
+%\subsubsection{}
+\chapter{남한의 보물}
+보물\cite{k3}
+\section{서울 화계사 동종 (1683년), 제11-5호}
+\section{칠곡 송림사전탑 사리장엄구 (7세기), 325호}
+\section{금동자물쇄 및 문고리 (동일신라), 777호}
+\section{용비어천가 (1445$\sim$1447년), 1483호}
+\chapter{북한의 국보}
+\section{ 평양성}
+\subsection{보통문 (6세기, 1473년), 3호}
+\subsection{대동문 (6세기, 1635년), 4호}
+\section{동명왕릉 (427년), 36호, 유네스코  세계기록유산}
+\section{금강산}
+\subsection{묘길상 (고려), 102호}
+\section{안악3호분 (357년), 67호}
+고구려 고분군\cite{k4}
+
+
+\chapter{우리 민족 국제의 문화재}
+\section{고구려 고분군, 유네스코 세계문화유산}
+고구려 고분군\cite{k4}
+
+\renewcommand\refname{웹사이트}
+\begin{thebibliography}{9}
+\addcontentsline{toc}{chapter}{\refname}
+\bibitem{k1} \verb#http://www.heritage.go.kr/index.jsp#, \verb#http://www.cha.go.kr#
+\bibitem{k2} \verb#http://german.visitkorea.or.kr/ger/CU/CU_GE_5_10_0.jsp#
+\bibitem{k3} \verb#http://ko.wikipedia.org/wiki/보물#  
+\bibitem{k4} \verb#http://whc.unesco.org/en/list/1091#
+\end{thebibliography}
+
+
+\tableofcontents
+
+%\end{boxedminipage}
+\end{document}
+
+
+* kompilation
+
+$ pdflatex toc-ko1 && pdflatex toc-ko1
+
+

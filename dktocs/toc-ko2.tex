@@ -1,0 +1,99 @@
+%%% toc-ko2.tex :: mito / nyamcoder %%%
+\documentclass[a4paper,11pt]{book}%  vgl. memoir, oblivoir, article, scrbook ... 
+\usepackage{boxedminipage}
+\usepackage[hangul]{kotex}
+\usepackage{times}
+\usepackage{titletoc}
+\contentsmargin{0pt}	% Abstand zum re. Rand 
+\titlecontents{chapter}[0em]	% einzug links, nicht optional! 
+	{\addvspace{1.4pc}\bfseries}
+	{{\Huge\thecontentspage\quad}}{}{}  
+%	{\contentspush{\Huge\thecontentspage\quad}}{}{} 	
+
+%  anm: {\thecontentslabel\ } ==> 제1장 ; bsp: lb2-67 
+\newcommand\xquad
+	{\hspace{1.4em plus .2em minus .2em}}	
+\titlecontents*{section}[0pt]
+	{\small}{}{}
+	{,~\thecontentspage}[\xquad\textbullet\xquad][.]
+\titlecontents*{subsection}[0pt]{\footnotesize}{}{}{}[\quad//\quad][\quad/\quad][]  % zu beginn " // ", id mitte " / ", am schluss " " ; 	% dazu +level bei subsection
+	
+%%% nach lbc2-66f 
+\setcounter{tocdepth}{2}% erhöht wg subsection 
+	
+%\setlength\textheight{27cm}
+%\setlength\voffset{-2cm}
+%\setlength\textwidth{16cm}
+
+\begin{document}	% toc: 48ff 
+\begin{boxedminipage}[t]{\linewidth}
+
+\tableofcontents		% muss sein, wenn noch kein .toc vorhanden 
+%\input{toc-ko2.toc}\contentsfinish
+\end{boxedminipage}
+
+\chapter*{머리말}
+\addcontentsline{toc}{chapter}{\protect\numberline{}머리말} % nötig, wenn \chapter* uä im toc sein sollen  
+한국은 광대한 문화 유산중에서 국보와 보물에 따라 분류된 작품이 많은데\,\cite{k1} 그 중에서 유네스코 세계유산에 문화재로 지정돤 것도 있다.\cite{k2}
+
+\chapter{남한의 국보}	% 1 ebene herausgenommen  
+\section{숭례문 (1호)}
+또는 남대문
+\section{불국사}
+\subsection{다보탑 (20호)}
+\subsection{석가탑 (21호)}
+\subsection{연화교\,·\,칠보교 (22호)}
+\subsection{청운교\,·\,백운교 (23호)}
+\subsection{금동비로자나불좌상 (26호)}
+\subsection{금동아미타여래좌상 (27호)}
+%\section{석굴암 (24호)}
+%\section{시각 예술\,·\,공예의 작품}
+%\section{금동미륵보살반가상 (83호)}
+%%%% \section{미술품\,·\,문서\,·\,인쇄물}
+\section{해인사 대장경판 (32호)}
+\section{훈민정음 (70호)}
+%\section{천마도 (207호)}
+\chapter{남한의 보물}
+보물\cite{k3}
+\section{서울 화계사 동종 (제11-5호)}
+\section{불국사 사리탑 (61호)}
+\section{칠곡 송림사전탑 사리장엄구 (325호)}
+\section{금동자물쇄 및 문고리 (777호)}
+\section{용비어천가 (1483호)}
+\chapter{북한의 국보}
+\section{ 평양성}
+\subsection{보통문 (3호)}
+\subsection{대동문 (4호)}
+\section{동명왕릉 (36호)}
+\section{금강산}
+\subsection{묘길상 (102호)}
+\section{안악3호분 (67호)}
+고구려 고분군\cite{k4}
+\section{연복사종 (136호)}
+\section{관음사대리석관음보살상 (156호)}
+\chapter{우리 민족 국제의 문화재}
+\section{고구려 고분군}
+고구려 고분군\cite{k4}
+
+\renewcommand\bibname{웹사이트}
+\begin{thebibliography}{9}
+
+\addcontentsline{toc}{chapter}{\protect\numberline{}\bibname}
+
+\bibitem{k1} \verb#http://www.heritage.go.kr#, \enskip\verb#http://www.cha.go.kr#
+\bibitem{k2} \verb#http://www.memorykorea.go.kr#,  「국보」를 참고
+\bibitem{k3} \verb#http://ko.wikipedia.org/wiki/보물#  
+\bibitem{k4} \verb#http://whc.unesco.org/en/list/1091#
+\end{thebibliography}
+
+\end{document}
+
+
+* kompilation:
+
+$ pdflatex toc-ko2 && pdflatex toc-ko2
+
+
+* scrbook: headline sf, sn rechts unten, breiterer satzspiegel als book, kt o+außen+it, sn u+außen
+* book: 	   "	  rm, sn mittig, kt o (kopfzeile), mit sn außen kap innen
+* titletoc: lb2-62ff 
