@@ -1,0 +1,13 @@
+﻿%%% kotex-ga-de.ist :: mito(XD) / nyamcoder %%%
+preamble "\\begin{theindex}\n\\def\\hindexhead#1{\\ifcase#1 가\\or
+나\\or 다\\or 라\\or 마\\or 바\\or 사\\or ᅀᅡ\\or 아\\or ᅌᅡ \\or 자\\or 차\\or 카\\or 타\\or 파\\or 하\\or  \\else  {Einzelne \\textit{jamo} und irreguläre \\textit{geulja}}\\fi}\n\n"
+
+headings_flag 1
+group_skip "\n\n\\indexspace\n"
+item_0 "\n\\item "
+heading_prefix "\\hfill\\fcolorbox{cyan}{white}{\\protect\\textsf{"heading_suffix"}}\\hfill\\nopagebreak\\protect\\vspace*{2ex}\n"
+symhead_positive "Sonderzeichen"
+numhead_positive "Zahlen"
+delim_0 "\\dotfill "
+delim_1 "\\dotfill "
+delim_2 "\\dotfill "

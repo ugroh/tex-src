@@ -1,0 +1,134 @@
+\documentclass[a4paper,11pt]{scrartcl}		% d-k-index.tex :: mito(XD) / nyamcoder
+\usepackage[ngerman]{babel}	% comment out for creating a Koreanized document (as in screenshot ''B'')
+\usepackage{kotex}		% screenshot ''C''
+% \usepackage[hangul]{kotex}	% comment out the preceeding line and use this instead for a Koreanized document, ''B''
+\usepackage[encapsulated]{CJK}
+\newcommand{\cn}[1]{\begin{CJK}{UTF8}{gbsn}#1\end{CJK}}
+\usepackage{makeidx}
+\makeindex
+\def\indexspace{\vskip 4em plus 2em minus 2em\relax}	% equalizing column heights
+\setlength\textheight{19cm}
+\usepackage{yfonts}
+\usepackage{color}
+\definecolor{haneul}{cmyk}{.2,0,0,0}
+\newcommand{\bfcyan}[1]{청록색의 볼드체: \textbf{\textcolor{cyan}{#1}}}
+\newcommand{\dasaek}{\makebox[0pt][r]{\textcolor{red}{\raisebox{.3ex}{$\longleftarrow$}}}여러 색의 글자\makebox[0pt][l]{\textcolor{red}{\raisebox{1.3ex}{\,$\nearrow$}}}\dotfill}
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\renewcommand\indexname{Stichwortverzeichnis}
+%\part{Einführung}
+
+\today\\[2cm]% p1
+멍멍! -- wau-wau!
+\index{感嘆詞@\fcolorbox{blue}{white}{感嘆詞·擬聲語·俗語}|(textit}
+\index{Blah-fasel-tröt"!}  Klangfigur
+\index{아@\underline{\ 아\ }|underline}
+\index{아야}
+
+\newpage% p2 
+\index{아야|seealso{Aua"!}}
+\index{blah}  klitschnass knochentrocken klirrend kalt  pardauz!  klappern
+\index{아이고@\textcolor{cyan}{아이고}|textbf}
+zack!\index{Blah-fasel-tröt"!} Pipapo  Schnickschnack
+zack!\index{Blah-fasel-tröt"!} Paperlapapp!
+
+\newpage% p3 
+bumm!\index{Blah-fasel-tröt"!} rumms!
+\index{blah!blubb} 꼬불꼬불 졸졸 흐르다 
+\index{ㅠㅠㅠㅠㅠ} 펄럭펄럭  냠냠  부르릉
+\index{갠소@{\Hugeᄀ\textcolor{cyan}{ᅢ}\textcolor{blue}{ᆫ}\textcolor{blue}{ᄉ}\textcolor{cyan}{ᅩ}\normalsize}|dasaek} 꿀꿀   삐약삐약    흐늘쩍흐늘쩍 
+\index{ㅇ벗다} % wiki: ‘없다’의 오타/typo
+\index{아|textsf}
+\index{아!아!아@\textsf{아}}
+
+\newpage% p4 
+%\index{frohlocken@\textit{frohlocken}!Luja@\textswab{Luja"!}!\underline{\textswab{-- Luja, sag i"!"!}}}
+\index{Aechz"!@\textswab{Ächz"!}!Inflektiv!\underline{\textswab{Erikativ}}}
+땡!\index{ᅵᇸ @ㅋㅋㅋ|textit}
+\index{ᅵᇸ   @{\quadᆿ}} % {ᅵᇸ   @{\quadᆿ}} {ᆿ@{\quadᆿ}}:  ᆿ comes first
+\index{Blah-fasel-tröt"!}
+\index{1337|see{l33t}}	% l33t
+
+\newpage% p5 
+%\index{Aetsch"!@Ätsch"!}
+\index{Aua@\colorbox{cyan}{\textcolor{white}{\textbf{Aua"!}}}}
+덜컹!\index{감우사|fbox}
+%\index{感嘆詞}
+
+\newpage% p6 
+리트(l33t, leet, 1337)\index{리트@l33t{\,}(리트)} 
+
+\newpage% p7 
+\index{2B\textbar"!2B}	% "사느냐 죽느냐" ; "| --> --- ! 
+%\index{1337}
+\index{blubb@\textsf{blubb}|see{blah}}
+앗!\index{아@\textbf{아}|textcolor{cyan}}
+\index{아!아|colorbox{cyan}}
+\index{*fg*}
+\index{bbb|fcolorbox{blue}{haneul}}
+%\index{ᄒᆞᆫ}
+\index{ᅵᇸ@\quadᅵᇸ|bfcyan}	%	HY PUA U+(1175+11F8)
+\index{ᅷᆽ@\quad\textcolor{cyan}{ᅷ}ᆽ}	%	HY PUA U+(1177+11BD)
+%\index{ᅗᇱ}	%
+\index{ᅡᆩ@ᄁᇟ}	%	HY PUA U+(1101+11DF)
+\index{ᆅᇃ@\quadᆅ\textcolor{cyan}{ᇃ}}	% ᆅᇃ	HY PUA U+(1185+11C3)
+\index{ᅵᇸ  @ᄏ}	%	HY PUA U+(110F)
+%\begin{CJK}{UTF8}{}	%%% mj (o)utbt don't work --> metafont!! 
+%\fontencoding{T1}\selectfont\CJKchar{"011}{"00F}
+%\end{CJK}
+ 
+%\index{아!아!啞@{\sf 啞}}
+\index{아@\underline{\ 아}}
+\index{感嘆詞@\fcolorbox{blue}{white}{感嘆詞·擬聲語·俗語}|)textit}
+발성법(發聲法)/Phonation
+감우사(感嘆詞)/Interjektion
+의성어(擬聲語)/Onomatopoesie
+의태어(擬態語)/Lautmalerei
+속어(俗語)/Slang
+게시판 언어(揭示板言語)/Internet-, Forumslang/Netzjargon 채팅/Chatten
+\index{캐}
+\newpage
+
+\setcounter{page}{18}
+헉!
+\index{아!아!\cn{啊, 阿}\,\textsf{[中]}}
+\index{아!아!「ああ"!」\,\textsf{[日]}}
+
+\printindex
+
+\end{document}
+
+
+
+* compilation (1) for default index formatting (screenshot ''A''):
+
+$ latex d-k-index.tex
+$ makeindex d-k-index
+$ latex d-k-index.tex
+$ dvipdfmx d-k-index.dvi
+
+
+* compilation (2) for Koreanized version w/ standard kotex.ist style (screenshot ''B''):
+
+$ latex d-k-index.tex
+$ komkindex.pl -s kotex d-k-index
+$ latex d-k-index.tex
+$ dvipdfmx d-k-index.dvi
+
+
+* compilation (3) for German version w/ enhanced sorting macro, individual  kotex-de.ist style and Hangul before Latin (screenshot ''C''):
+
+$ latex d-k-index.tex
+$ (/path/to/)komkindex-de.pl  -s (/path/o/)kotex-ga-de.ist  -k  d-k-index
+$ latex d-k-index.tex
+$ dvipdfmx d-k-index.dvi
+
+
+* notes:
+
+a)  new files need a texhash for becoming registered by the TeX system
+b)  pdflatex may used instead of latex && dvipdfmx
+c)  optionally rename the final different PDFs
+d)  the provided komkindex-de.pl itself doesn't work; the original komkindex.pl by D-H Kim needs to be edited and renamed accordingly
+e)  when playing with index files, back them up to prevent overwriting (like the .ind)
